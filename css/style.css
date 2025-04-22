@@ -1,0 +1,557 @@
+.hero {
+    background: url('../img/school.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 150px 0 100px;
+    position: relative;
+  }
+
+  .hero-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 60px 0;
+  }
+
+  .hero h1 {
+    font-weight: 700;
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    max-width: 600px;
+    margin-top: 15px;
+    font-size: 1rem;
+  }
+
+  .hero .btn {
+    margin-top: 25px;
+    margin-right: 10px;
+  }
+
+  /* Stats Cards */
+  .stats-card {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  }
+
+  .stats-card h3 {
+    color: #146c43;
+    font-weight: 700;
+  }
+
+  /* Live Chat */
+  .chat-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: #198754;
+    color: white;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    border: none;
+    font-size: 24px;
+  }
+
+  .chat-box {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 320px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    display: none;
+    flex-direction: column;
+    z-index: 1001;
+  }
+
+  .chat-header {
+    background-color: #198754;
+    color: white;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-weight: bold;
+  }
+
+  .chat-body {
+    padding: 10px;
+    max-height: 300px;
+    overflow-y: auto;
+    font-size: 14px;
+  }
+
+  .chat-message {
+    margin-bottom: 10px;
+  }
+
+  .chat-message.user {
+    text-align: right;
+  }
+
+  .chat-message.bot {
+    text-align: left;
+  }
+
+  .chat-footer {
+    display: flex;
+    border-top: 1px solid #ddd;
+  }
+
+  .chat-footer input {
+    flex: 1;
+    border: none;
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .chat-footer button {
+    background: #198754;
+    color: white;
+    border: none;
+    padding: 0 15px;
+  }
+
+  .chat-footer input:focus {
+    outline: none;
+  }
+
+  /* Program Unggulan Section */
+
+  .program-card {
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .program-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .bi-check-circle-fill {
+    font-size: 1.1rem;
+  }
+  
+  .icon-wrapper {
+    transition: all 0.3s ease;
+  }
+  
+  .program-card:hover .icon-wrapper {
+    background-color: rgba(25, 135, 84, 0.2) !important;
+    transform: scale(1.1);
+  }
+
+  /* Akademik Section */
+  .akademik-pane {
+    display: none;
+  }
+  
+  .akademik-pane.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+  }
+  
+  .akademik-btn.active {
+    background-color: #198754;
+    color: white !important;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .icon-wrapper {
+    transition: all 0.3s ease;
+  }
+  
+  .card:hover .icon-wrapper {
+    background-color: rgba(25, 135, 84, 0.2) !important;
+    transform: scale(1.1);
+  }
+
+  .bg-light:hover .icon-wrapper {
+    background-color: rgba(25, 135, 84, 0.2) !important;
+    transform: scale(1.1);
+  }
+  
+  .bg-light {
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .bg-light:hover {
+    background-color: #f8f9fa !important;
+    transform: translateY(-3px);
+  }
+
+  .ekskul-image-container {
+    overflow: hidden;
+    border-radius: 1rem;
+    position: relative;
+    height: 220px;
+    transition: all 0.3s ease;
+  }
+  
+  .ekskul-image-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  }
+  
+  .ekskul-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .ekskul-image-container:hover .ekskul-image {
+    transform: scale(1.05);
+  }
+  
+  .image-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+    color: white;
+    padding: 15px;
+    text-align: center;
+  }
+
+  /* Prestasi Styles */
+  .prestasi-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 1.5rem;
+  }
+  
+  .achievement-item {
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .achievement-icon {
+    width: 60px;
+    height: 60px;
+    background-color: #f5f5f5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    flex-shrink: 0;
+  }
+  
+  .achievement-icon i {
+    color: #198754;
+    font-size: 1.5rem;
+  }
+  
+  .achievement-content h5 {
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    color: #333;
+    font-size: 1rem;
+  }
+  
+  .achievement-content p {
+    color: #666;
+    margin-bottom: 0;
+    font-size: 0.9rem;
+  }
+  
+  /* Testimonial Styles */
+  .testimonial-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .testimonial-card {
+    background-color: #2d3748;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    color: #fff;
+    height: 100%;
+  }
+  
+  .testimonial-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 1rem;
+  }
+  
+  .testimonial-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .testimonial-name {
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+  }
+  
+  .testimonial-info {
+    color: #cbd5e0;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .testimonial-text {
+    font-style: italic;
+    line-height: 1.6;
+    color: #e2e8f0;
+  }
+
+  /* Prestasi & Pencapaian */
+    
+    .section-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #2d3748;
+      margin-bottom: 1rem;
+    }
+    
+    .section-description {
+      color: #4a5568;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    /* Timeline Styles */
+    .timeline-container {
+      position: relative;
+      padding-left: 50px;
+    }
+    
+    .timeline-item {
+      position: relative;
+      padding-bottom: 2.5rem;
+    }
+    
+    .timeline-item:last-child {
+      padding-bottom: 0;
+    }
+    
+    .timeline-icon {
+      position: absolute;
+      left: -50px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: #166534;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .timeline-year {
+      font-weight: 700;
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+      color: #166534;
+    }
+    
+    .timeline-content {
+      color: #4a5568;
+      line-height: 1.6;
+    }
+    
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -31px;
+      top: 40px;
+      bottom: 0;
+      width: 2px;
+      background-color: #e2e8f0;
+    }
+    
+    .timeline-item:last-child::before {
+      display: none;
+    }
+    
+    /* Graph Styles */
+    .graph-container {
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      padding: 1.5rem;
+      position: relative;
+    }
+    
+    .tooltip-container {
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      padding: 10px 15px;
+      border-radius: 5px;
+      font-size: 0.9rem;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.3s;
+      z-index: 10;
+      max-width: 250px;
+    }
+    
+    /* Gallery Styles */
+    .gallery-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+    }
+    
+    .gallery-item {
+      position: relative;
+      margin-bottom: 1.5rem;
+      overflow: hidden;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    
+    .gallery-image {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    
+    .gallery-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      display: flex;
+      align-items: flex-end;
+      padding: 1.5rem;
+    }
+    
+    .gallery-item:hover .gallery-overlay {
+      opacity: 1;
+    }
+    
+    .gallery-item:hover .gallery-image {
+      transform: scale(1.05);
+    }
+    
+    .gallery-description {
+      color: #fff;
+      font-size: 0.9rem;
+    }
+
+    /* Berita & Agenda */
+
+    /* Style for the Agenda Mendatang section */
+.col-md-4 .card {
+    border-radius: 10px !important;
+}
+
+.col-md-4 .card h4 {
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+}
+
+.col-md-4 .card .list-unstyled li {
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+    margin-bottom: 12px; /* Adjust vertical spacing */
+    font-size: 0.9rem; /* Adjust font size */
+    line-height: 1.4; /* Improve readability */
+}
+
+.col-md-4 .card .list-unstyled .date {
+    background-color: #e8ede9; /* Light gray background */
+    color: #1e5128; /* Darker gray text */
+    padding: 6px 10px;
+    border-radius: 6px; /* Subtle rounded corners */
+    margin-right: 15px; /* Spacing between date and text */
+    font-weight: bold;
+    font-size: 0.85rem;
+    width: 55px; /* Fixed width for alignment */
+    text-align: center;
+}
+
+.col-md-4 .card .list-unstyled span {
+    /* Style for the event description */
+    color: #343a40; /* Dark text color */
+}
+
+/* Style for the Kategori section */
+.col-md-4 .card h5 {
+    font-size: 1.1rem;
+    margin-top: 20px;
+    margin-bottom: 15px; /* Increased bottom margin for spacing */
+    font-weight: bold;
+    color: #343a40; /* Darker text color for the title */
+}
+
+.col-md-4 .card .list-unstyled.kategori-list li {
+    font-size: 0.95rem;
+    color: #555;
+    display: flex;
+    justify-content: space-between; /* Space out text and number */
+    align-items: center;
+    padding: 8px 0; /* Add vertical padding for spacing */
+    border-bottom: none; /* Remove bottom border */
+}
+
+.col-md-4 .card .list-unstyled.kategori-list li span {
+    background-color: #f8f9fa; /* Light gray circle background */
+    color: #495057; /* Dark gray number text */
+    border-radius: 50%; /* Make it a circle */
+    width: 24px; /* Adjust width and height for size */
+    height: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem; /* Adjust number font size */
+}
+
+h5 {
+    margin-top: 1rem;
+    font-weight: bold;
+}
+ul.list-unstyled {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+ul.list-unstyled li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+}
+
+.badge {
+    background-color: #f0f0f0;
+    color: #333;
+    border-radius: 50%;
+    padding: 0.3rem 0.6rem;
+    font-size: 0.85rem;
+    text-align: center;
+    display: inline-block;
+    min-width: 1.5rem;
+}
