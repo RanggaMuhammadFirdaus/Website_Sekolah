@@ -266,6 +266,34 @@
     margin-bottom: 0;
     font-size: 0.9rem;
   }
+
+  /* Grafik */
+
+  .graph-container {
+    position: relative;
+    width: 100%;
+    height: 400px; /* tinggi lebih kecil dibanding lebar */
+  }
+  
+  .tooltip-container {
+    position: absolute;
+    display: block;
+    border-style: solid;
+    white-space: nowrap;
+    z-index: 9999999;
+    box-shadow: rgba(0, 0, 0, 0.2) 1px 2px 10px;
+    transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.4s ease;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-width: 1px;
+    border-radius: 4px;
+    color: rgb(31, 41, 55);
+    font: 14px / 21px "Microsoft YaHei";
+    padding: 10px;
+    border-color: rgb(229, 231, 235);
+    pointer-events: none;
+  }
+  
+  
   
   /* Testimonial Styles */
   .testimonial-title {
@@ -555,3 +583,121 @@ ul.list-unstyled li {
     display: inline-block;
     min-width: 1.5rem;
 }
+
+/* styles.css */
+
+/* Sesuaikan gaya untuk layout */
+body {
+  font-family: Arial, sans-serif;
+}
+
+#fasilitas-sekolah {
+  background-color: #f8f9fa; /* Warna latar belakang untuk section */
+}
+
+.card {
+  transition: transform 0.2s; /* Animasi efek zoom */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Besarkan kartu saat hover */
+}
+
+/* Gaya untuk tombol */
+.btn-success {
+  background-color: #28a745; /* Warna tombol hijau */
+  border-color: #28a745; /* Warna border tombol hijau */
+}
+
+.btn-success:hover {
+  background-color: #218838; /* Warna tombol saat hover lebih gelap */
+  border-color: #1e7e34; /* Warna border tombol saat hover lebih gelap */
+}
+
+/* Pendaftaran */
+
+body {
+  background-color: #f8f9fa;
+  font-family: 'Segoe UI', sans-serif;
+}
+.form-section {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  padding: 2rem;
+}
+.form-label {
+  font-weight: 500;
+}
+.form-check-label {
+  margin-left: 5px;
+}
+.btn-dark-green {
+  background-color: #1a4d2e;
+  color: white;
+}
+.btn-dark-green:hover {
+  background-color: #145c2e;
+}
+.form-control, .form-select {
+  background-color: #2f3e55;
+  color: white;
+  border: none;
+}
+.form-control::placeholder, .form-select {
+  color: #ccc;
+}
+.icon {
+  width: 24px;
+  margin-right: 10px;
+  color: #3a7859;
+}
+
+/* Footer */
+
+footer {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+footer h5,
+footer h6 {
+  color: #fff;
+  font-weight: 600;
+}
+
+footer a {
+  color: #ccc;
+  transition: color 0.2s ease;
+}
+
+footer a:hover {
+  color: #fff;
+}
+
+footer .form-control {
+  background-color: #1d2939;
+  border: 1px solid #3c4d64;
+  color: white;
+}
+
+footer .form-control::placeholder {
+  color: #999;
+}
+
+footer .btn-success {
+  background-color: #00b96b;
+  border-color: #00b96b;
+}
+
+footer .btn-success:hover {
+  background-color: #00a35d;
+  border-color: #009b56;
+}
+
+footer iframe {
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
