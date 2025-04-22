@@ -32,8 +32,8 @@
           <li class="nav-item"><a class="nav-link" href="#">Berita</a></li>
         </ul>
         <form class="d-flex me-3" role="search">
-          <input class="form-control" type="search" placeholder="Cari..." aria-label="Search">
-        </form>
+          <input class="form-control bg-white text-dark border border-secondary rounded-pill shadow-sm px-4" type="search" placeholder="Cari..." aria-label="Search">
+        </form>        
         <a href="#" class="btn btn-success rounded-pill">Daftar Sekarang</a>
       </div>
     </div>
@@ -113,7 +113,7 @@
   </section>
 
   <!-- Profil SMA Al-Quran Section -->
-  <section class="py-5 bg-white">
+  <section class="Qur'an">
     <div class="container">
       <!-- Title -->
       <div class="text-center mb-5">
@@ -150,7 +150,7 @@
 
         <!-- Image -->
         <div class="col-md-6 text-center">
-          <img src="img/school.jpg" alt="Gedung SMA Al-Quran" class="img-fluid rounded-4 shadow-sm"
+          <img src="img/profile.jpg" alt="Gedung SMA Al-Quran" class="img-fluid rounded-4 shadow-sm"
             style="max-width: 100%;">
         </div>
       </div>
@@ -158,7 +158,7 @@
   </section>
 
   <!-- Program Unggulan Section -->
-  <section class="py-5 bg-light">
+  <section class="program-unggulan">
     <div class="container">
       <!-- Title -->
       <div class="text-center mb-5">
@@ -270,157 +270,431 @@
   </section>
 
   <!-- Program Akademik Section -->
-  <section class="py-5 bg-white">
-    <div class="container">
-      <!-- Title -->
-      <div class="text-center mb-5">
-        <h2 class="fw-bold">Program Akademik</h2>
-        <p class="text-secondary">
-          Kurikulum kami dirancang untuk mengembangkan potensi siswa secara maksimal melalui pendekatan integratif
-          antara ilmu pengetahuan dan nilai-nilai islam.
-        </p>
+<section id="program-akademik" class="py-5 bg-white">
+  <div class="container">
+    <!-- Title -->
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Program Akademik</h2>
+      <p class="text-secondary">
+        Kurikulum kami dirancang untuk mengembangkan potensi siswa secara maksimal melalui pendekatan integratif
+        antara ilmu pengetahuan dan nilai-nilai islam.
+      </p>
+    </div>
+
+    <!-- Toggle Buttons -->
+    <div class="d-flex justify-content-center mb-5">
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-outline-success active akademik-btn"
+          data-target="kurikulum">Kurikulum</button>
+        <button type="button" class="btn btn-outline-success akademik-btn"
+          data-target="ekstrakurikuler">Ekstrakurikuler</button>
+        <button type="button" class="btn btn-outline-success akademik-btn" data-target="prestasi">Prestasi</button>
+      </div>
+    </div>
+
+    <!-- Content Container -->
+    <div class="akademik-content">
+      <!-- Kurikulum Content (Default) -->
+      <div id="kurikulum" class="akademik-pane active">
+        <div class="row">
+          <!-- Kurikulum Nasional -->
+          <div class="col-md-6 mb-4">
+            <div class="card h-100 border-0 shadow-sm rounded-4">
+              <div class="card-body p-4">
+                <h4 class="fw-bold mb-3">Kurikulum Nasional</h4>
+                <p class="text-secondary mb-4">
+                  Kami mengimplementasikan kurikulum nasional yang diperkaya dengan pendekatan pembelajaran aktif dan
+                  inovatif untuk mengembangkan kompetensi siswa secara optimal.
+                </p>
+                <ul class="list-unstyled">
+                  <li class="mb-2 d-flex align-items-start">
+                    <span class="text-success me-2"><i class="bi bi-check"></i></span>
+                    <span>Matematika dan Ilmu Pengetahuan Alam</span>
+                  </li>
+                  <li class="mb-2 d-flex align-items-start">
+                    <span class="text-success me-2"><i class="bi bi-check"></i></span>
+                    <span>Ilmu Pengetahuan Sosial</span>
+                  </li>
+                  <li class="mb-2 d-flex align-items-start">
+                    <span class="text-success me-2"><i class="bi bi-check"></i></span>
+                    <span>Bahasa Indonesia dan Bahasa Inggris</span>
+                  </li>
+                  <li class="mb-2 d-flex align-items-start">
+                    <span class="text-success me-2"><i class="bi bi-check"></i></span>
+                    <span>Pendidikan Kewarganegaraan</span>
+                  </li>
+                  <li class="d-flex align-items-start">
+                    <span class="text-success me-2"><i class="bi bi-check"></i></span>
+                    <span>Seni Budaya dan Prakarya</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Kurikulum Diniyah -->
+          <div class="col-md-6 mb-4">
+            <div class="card h-100 border-0 shadow-sm rounded-4">
+              <div class="card-body p-4">
+                <h4 class="fw-bold mb-3">Kurikulum Diniyah</h4>
+                <p class="text-secondary mb-4">
+                  Kurikulum keislaman yang komprehensif untuk memperdalam pemahaman agama dan membentuk kepribadian
+                  yang sesuai dengan nilai-nilai islam.
+                </p>
+                <ul class="list-unstyled">
+                  <li class="mb-2 d-flex align-items-start">
+                    <span class="text-success me-2"><i class="bi bi-check"></i></span>
+                    <span>Tahfiz dan Tahsin Al-Quran</span>
+                  </li>
+                  <li class="mb-2 d-flex align-items-start">
+                    <span class="text-success me-2"><i class="bi bi-check"></i></span>
+                    <span>Aqidah dan Akhlak</span>
+                  </li>
+                  <li class="mb-2 d-flex align-items-start">
+                    <span class="text-success me-2"><i class="bi bi-check"></i></span>
+                    <span>Fiqih dan Ushul Fiqih</span>
+                  </li>
+                  <li class="mb-2 d-flex align-items-start">
+                    <span class="text-success me-2"><i class="bi bi-check"></i></span>
+                    <span>Bahasa Arab</span>
+                  </li>
+                  <li class="d-flex align-items-start">
+                    <span class="text-success me-2"><i class="bi bi-check"></i></span>
+                    <span>Sirah Nabawiyah dan Sejarah Islam</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Metode Pembelajaran -->
+        <div class="row mt-4">
+          <div class="col-12">
+            <h4 class="fw-bold mb-4 text-center">Metode Pembelajaran</h4>
+            <div class="row">
+              <!-- Active Learning -->
+              <div class="col-md-4 mb-4">
+                <div class="card h-100 border-0 shadow-sm rounded-4">
+                  <div class="card-body p-4 text-center">
+                    <div
+                      class="icon-wrapper bg-success bg-opacity-10 rounded-circle d-inline-flex justify-content-center align-items-center mb-3"
+                      style="width:60px; height:60px;">
+                      <i class="bi bi-lightbulb fs-4 text-success"></i>
+                    </div>
+                    <h5 class="fw-bold">Active Learning</h5>
+                    <p class="text-secondary">
+                      Pembelajaran aktif yang melibatkan siswa dalam proses belajar melalui diskusi, proyek, dan
+                      pemecahan masalah.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Collaborative Learning -->
+              <div class="col-md-4 mb-4">
+                <div class="card h-100 border-0 shadow-sm rounded-4">
+                  <div class="card-body p-4 text-center">
+                    <div
+                      class="icon-wrapper bg-success bg-opacity-10 rounded-circle d-inline-flex justify-content-center align-items-center mb-3"
+                      style="width:60px; height:60px;">
+                      <i class="bi bi-people fs-4 text-success"></i>
+                    </div>
+                    <h5 class="fw-bold">Collaborative Learning</h5>
+                    <p class="text-secondary">
+                      Pembelajaran kolaboratif yang mengembangkan kemampuan kerja sama dan komunikasi antar siswa.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Project-Based Learning -->
+              <div class="col-md-4 mb-4">
+                <div class="card h-100 border-0 shadow-sm rounded-4">
+                  <div class="card-body p-4 text-center">
+                    <div
+                      class="icon-wrapper bg-success bg-opacity-10 rounded-circle d-inline-flex justify-content-center align-items-center mb-3"
+                      style="width:60px; height:60px;">
+                      <i class="bi bi-kanban fs-4 text-success"></i>
+                    </div>
+                    <h5 class="fw-bold">Project-Based Learning</h5>
+                    <p class="text-secondary">
+                      Pembelajaran berbasis proyek yang mengembangkan kreativitas dan kemampuan berpikir kritis siswa.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <!-- Toggle Buttons -->
-      <div class="d-flex justify-content-center mb-5">
-        <div class="btn-group" role="group">
-          <button type="button" class="btn btn-outline-success active akademik-btn"
-            data-target="kurikulum">Kurikulum</button>
-          <button type="button" class="btn btn-outline-success akademik-btn"
-            data-target="ekstrakurikuler">Ekstrakurikuler</button>
-          <button type="button" class="btn btn-outline-success akademik-btn" data-target="prestasi">Prestasi</button>
+      <!-- Ekstrakurikuler Content -->
+      <div id="ekstrakurikuler" class="akademik-pane">
+        <div class="row justify-content-center">
+          <div class="col-md-10">
+            <div class="card border-0 shadow-sm rounded-4">
+              <div class="card-body p-4">
+                <h4 class="fw-bold mb-4 text-center">Program Ekstrakurikuler</h4>
+
+                <!-- Original Ekstrakurikuler Content -->
+                <div class="row">
+                  <!-- Klub Sains -->
+                  <div class="col-md-6 mb-3">
+                    <div class="d-flex align-items-center p-3 bg-light rounded-3 h-100">
+                      <div
+                        class="icon-wrapper bg-success bg-opacity-10 rounded-circle d-flex justify-content-center align-items-center flex-shrink-0"
+                        style="width:50px; height:50px;">
+                        <i class="bi bi-robot text-success fs-5"></i>
+                      </div>
+                      <div class="ms-3">
+                        <h6 class="fw-bold mb-1">Klub Sains</h6>
+                        <p class="text-secondary small mb-0">Pengembangan minat dan bakat di bidang sains dan
+                          teknologi.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- English Club -->
+                  <div class="col-md-6 mb-3">
+                    <div class="d-flex align-items-center p-3 bg-light rounded-3 h-100">
+                      <div
+                        class="icon-wrapper bg-success bg-opacity-10 rounded-circle d-flex justify-content-center align-items-center flex-shrink-0"
+                        style="width:50px; height:50px;">
+                        <i class="bi bi-translate text-success fs-5"></i>
+                      </div>
+                      <div class="ms-3">
+                        <h6 class="fw-bold mb-1">English Club</h6>
+                        <p class="text-secondary small mb-0">Pengembangan kemampuan berbahasa Inggris melalui diskusi
+                          dan debat.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Basket dan Futsal -->
+                  <div class="col-md-6 mb-3">
+                    <div class="d-flex align-items-center p-3 bg-light rounded-3 h-100">
+                      <div
+                        class="icon-wrapper bg-success bg-opacity-10 rounded-circle d-flex justify-content-center align-items-center flex-shrink-0"
+                        style="width:50px; height:50px;">
+                        <i class="bi bi-basket text-success fs-5"></i>
+                      </div>
+                      <div class="ms-3">
+                        <h6 class="fw-bold mb-1">Basket dan Futsal</h6>
+                        <p class="text-secondary small mb-0">Pengembangan kemampuan olahraga dan jiwa sportivitas.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Pencak Silat -->
+                  <div class="col-md-6 mb-3">
+                    <div class="d-flex align-items-center p-3 bg-light rounded-3 h-100">
+                      <div
+                        class="icon-wrapper bg-success bg-opacity-10 rounded-circle d-flex justify-content-center align-items-center flex-shrink-0"
+                        style="width:50px; height:50px;">
+                        <i class="bi bi-shield-shaded text-success fs-5"></i>
+                      </div>
+                      <div class="ms-3">
+                        <h6 class="fw-bold mb-1">Pencak Silat</h6>
+                        <p class="text-secondary small mb-0">Seni bela diri tradisional yang mengembangkan fisik dan
+                          mental.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Qira'ah dan Tilawah -->
+                  <div class="col-md-6 mb-3">
+                    <div class="d-flex align-items-center p-3 bg-light rounded-3 h-100">
+                      <div
+                        class="icon-wrapper bg-success bg-opacity-10 rounded-circle d-flex justify-content-center align-items-center flex-shrink-0"
+                        style="width:50px; height:50px;">
+                        <i class="bi bi-book text-success fs-5"></i>
+                      </div>
+                      <div class="ms-3">
+                        <h6 class="fw-bold mb-1">Qira'ah dan Tilawah</h6>
+                        <p class="text-secondary small mb-0">Pengembangan kemampuan membaca Al-Quran dengan tajwid dan
+                          lagu yang indah.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Kaligrafi Islam -->
+                  <div class="col-md-6 mb-3">
+                    <div class="d-flex align-items-center p-3 bg-light rounded-3 h-100">
+                      <div
+                        class="icon-wrapper bg-success bg-opacity-10 rounded-circle d-flex justify-content-center align-items-center flex-shrink-0"
+                        style="width:50px; height:50px;">
+                        <i class="bi bi-pen text-success fs-5"></i>
+                      </div>
+                      <div class="ms-3">
+                        <h6 class="fw-bold mb-1">Kaligrafi Islam</h6>
+                        <p class="text-secondary small mb-0">Seni menulis indah huruf Arab dan kaligrafi Al-Quran.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Dai Muda -->
+                  <div class="col-md-6 mb-3 mb-md-0">
+                    <div class="d-flex align-items-center p-3 bg-light rounded-3 h-100">
+                      <div
+                        class="icon-wrapper bg-success bg-opacity-10 rounded-circle d-flex justify-content-center align-items-center flex-shrink-0"
+                        style="width:50px; height:50px;">
+                        <i class="bi bi-megaphone text-success fs-5"></i>
+                      </div>
+                      <div class="ms-3">
+                        <h6 class="fw-bold mb-1">Dai Muda</h6>
+                        <p class="text-secondary small mb-0">Pengembangan kemampuan berdakwah dan public speaking.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Nasyid -->
+                  <div class="col-md-6">
+                    <div class="d-flex align-items-center p-3 bg-light rounded-3 h-100">
+                      <div
+                        class="icon-wrapper bg-success bg-opacity-10 rounded-circle d-flex justify-content-center align-items-center flex-shrink-0"
+                        style="width:50px; height:50px;">
+                        <i class="bi bi-music-note-beamed text-success fs-5"></i>
+                      </div>
+                      <div class="ms-3">
+                        <h6 class="fw-bold mb-1">Nasyid</h6>
+                        <p class="text-secondary small mb-0">Grup vokal islami yang menyanyikan lagu-lagu bernuansa
+                          religi.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Image Gallery Row -->
+              <div class="row mb-4 px-3">
+                <!-- Image 1 -->
+                <div class="col-md-4 mb-3 mb-md-0">
+                  <div class="ekskul-image-container shadow-sm rounded-3 overflow-hidden">
+                    <img src="img/school.jpg" alt="Kegiatan Olahraga" class="ekskul-image w-100">
+                  </div>
+                </div>
+
+                <!-- Image 2 -->
+                <div class="col-md-4 mb-3 mb-md-0">
+                  <div class="ekskul-image-container shadow-sm rounded-3 overflow-hidden">
+                    <img src="img/school.jpg" alt="Kegiatan Seni Islami" class="ekskul-image w-100">
+                  </div>
+                </div>
+
+                <!-- Image 3 -->
+                <div class="col-md-4">
+                  <div class="ekskul-image-container shadow-sm rounded-3 overflow-hidden">
+                    <img src="img/school.jpg" alt="Kegiatan Akademik" class="ekskul-image w-100">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
-      <!-- Content Container -->
-      <div class="akademik-content">
-        <!-- Kurikulum Content (Default) -->
-        <div id="kurikulum" class="akademik-pane active">
-          <div class="row">
-            <!-- Kurikulum Nasional -->
-            <div class="col-md-6 mb-4">
-              <div class="card h-100 border-0 shadow-sm rounded-4">
-                <div class="card-body p-4">
-                  <h4 class="fw-bold mb-3">Kurikulum Nasional</h4>
-                  <p class="text-secondary mb-4">
-                    Kami mengimplementasikan kurikulum nasional yang diperkaya dengan pendekatan pembelajaran aktif dan
-                    inovatif untuk mengembangkan kompetensi siswa secara optimal.
-                  </p>
-                  <ul class="list-unstyled">
-                    <li class="mb-2 d-flex align-items-start">
-                      <span class="text-success me-2"><i class="bi bi-check"></i></span>
-                      <span>Matematika dan Ilmu Pengetahuan Alam</span>
-                    </li>
-                    <li class="mb-2 d-flex align-items-start">
-                      <span class="text-success me-2"><i class="bi bi-check"></i></span>
-                      <span>Ilmu Pengetahuan Sosial</span>
-                    </li>
-                    <li class="mb-2 d-flex align-items-start">
-                      <span class="text-success me-2"><i class="bi bi-check"></i></span>
-                      <span>Bahasa Indonesia dan Bahasa Inggris</span>
-                    </li>
-                    <li class="mb-2 d-flex align-items-start">
-                      <span class="text-success me-2"><i class="bi bi-check"></i></span>
-                      <span>Pendidikan Kewarganegaraan</span>
-                    </li>
-                    <li class="d-flex align-items-start">
-                      <span class="text-success me-2"><i class="bi bi-check"></i></span>
-                      <span>Seni Budaya dan Prakarya</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-
-            <!-- Kurikulum Diniyah -->
-            <div class="col-md-6 mb-4">
-              <div class="card h-100 border-0 shadow-sm rounded-4">
-                <div class="card-body p-4">
-                  <h4 class="fw-bold mb-3">Kurikulum Diniyah</h4>
-                  <p class="text-secondary mb-4">
-                    Kurikulum keislaman yang komprehensif untuk memperdalam pemahaman agama dan membentuk kepribadian
-                    yang sesuai dengan nilai-nilai islam.
-                  </p>
-                  <ul class="list-unstyled">
-                    <li class="mb-2 d-flex align-items-start">
-                      <span class="text-success me-2"><i class="bi bi-check"></i></span>
-                      <span>Tahfiz dan Tahsin Al-Quran</span>
-                    </li>
-                    <li class="mb-2 d-flex align-items-start">
-                      <span class="text-success me-2"><i class="bi bi-check"></i></span>
-                      <span>Aqidah dan Akhlak</span>
-                    </li>
-                    <li class="mb-2 d-flex align-items-start">
-                      <span class="text-success me-2"><i class="bi bi-check"></i></span>
-                      <span>Fiqih dan Ushul Fiqih</span>
-                    </li>
-                    <li class="mb-2 d-flex align-items-start">
-                      <span class="text-success me-2"><i class="bi bi-check"></i></span>
-                      <span>Bahasa Arab</span>
-                    </li>
-                    <li class="d-flex align-items-start">
-                      <span class="text-success me-2"><i class="bi bi-check"></i></span>
-                      <span>Sirah Nabawiyah dan Sejarah Islam</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Metode Pembelajaran -->
-          <div class="row mt-4">
-            <div class="col-12">
-              <h4 class="fw-bold mb-4 text-center">Metode Pembelajaran</h4>
-              <div class="row">
-                <!-- Active Learning -->
-                <div class="col-md-4 mb-4">
-                  <div class="card h-100 border-0 shadow-sm rounded-4">
-                    <div class="card-body p-4 text-center">
-                      <div
-                        class="icon-wrapper bg-success bg-opacity-10 rounded-circle d-inline-flex justify-content-center align-items-center mb-3"
-                        style="width:60px; height:60px;">
-                        <i class="bi bi-lightbulb fs-4 text-success"></i>
+      <!-- Prestasi Content -->
+      <div id="prestasi" class="akademik-pane">
+        <div class="row justify-content-center">
+          <div class="col-md-10">
+            <div class="card border-0 shadow-sm rounded-4">
+              <div class="card-body p-4">
+                <h4 class="fw-bold mb-4 text-center">Prestasi Siswa</h4>
+                <p class="text-center text-secondary mb-4">
+                  Berikut adalah beberapa prestasi yang telah diraih oleh siswa-siswi kami dalam berbagai bidang:
+                </p>
+                
+                <div class="row">
+                  <!-- Academic Achievements -->
+                  <div class="col-md-6 mb-4">
+                    <div class="card h-100 border-0 shadow-sm rounded-4">
+                      <div class="card-body p-4">
+                        <h5 class="fw-bold mb-3 text-success"><i class="bi bi-trophy-fill me-2"></i> Akademik</h5>
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item d-flex justify-content-between align-items-center border-0 py-2">
+                            Juara 1 Olimpiade Matematika Tingkat Kota
+                            <span class="badge bg-success rounded-pill">2023</span>
+                          </li>
+                          <li class="list-group-item d-flex justify-content-between align-items-center border-0 py-2">
+                            Juara 2 Olimpiade Sains Nasional
+                            <span class="badge bg-success rounded-pill">2022</span>
+                          </li>
+                          <li class="list-group-item d-flex justify-content-between align-items-center border-0 py-2">
+                            Juara 3 Lomba Karya Tulis Ilmiah
+                            <span class="badge bg-success rounded-pill">2023</span>
+                          </li>
+                        </ul>
                       </div>
-                      <h5 class="fw-bold">Active Learning</h5>
-                      <p class="text-secondary">
-                        Pembelajaran aktif yang melibatkan siswa dalam proses belajar melalui diskusi, proyek, dan
-                        pemecahan masalah.
-                      </p>
                     </div>
                   </div>
-                </div>
-
-                <!-- Collaborative Learning -->
-                <div class="col-md-4 mb-4">
-                  <div class="card h-100 border-0 shadow-sm rounded-4">
-                    <div class="card-body p-4 text-center">
-                      <div
-                        class="icon-wrapper bg-success bg-opacity-10 rounded-circle d-inline-flex justify-content-center align-items-center mb-3"
-                        style="width:60px; height:60px;">
-                        <i class="bi bi-people fs-4 text-success"></i>
+                  
+                  <!-- Islamic Achievements -->
+                  <div class="col-md-6 mb-4">
+                    <div class="card h-100 border-0 shadow-sm rounded-4">
+                      <div class="card-body p-4">
+                        <h5 class="fw-bold mb-3 text-success"><i class="bi bi-moon-stars-fill me-2"></i> Keislaman</h5>
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item d-flex justify-content-between align-items-center border-0 py-2">
+                            Juara 1 MTQ Tingkat Provinsi
+                            <span class="badge bg-success rounded-pill">2023</span>
+                          </li>
+                          <li class="list-group-item d-flex justify-content-between align-items-center border-0 py-2">
+                            Juara 2 Lomba Kaligrafi Nasional
+                            <span class="badge bg-success rounded-pill">2022</span>
+                          </li>
+                          <li class="list-group-item d-flex justify-content-between align-items-center border-0 py-2">
+                            Juara 1 Hafalan Juz 30
+                            <span class="badge bg-success rounded-pill">2023</span>
+                          </li>
+                        </ul>
                       </div>
-                      <h5 class="fw-bold">Collaborative Learning</h5>
-                      <p class="text-secondary">
-                        Pembelajaran kolaboratif yang mengembangkan kemampuan kerja sama dan komunikasi antar siswa.
-                      </p>
                     </div>
                   </div>
-                </div>
-
-                <!-- Project-Based Learning -->
-                <div class="col-md-4 mb-4">
-                  <div class="card h-100 border-0 shadow-sm rounded-4">
-                    <div class="card-body p-4 text-center">
-                      <div
-                        class="icon-wrapper bg-success bg-opacity-10 rounded-circle d-inline-flex justify-content-center align-items-center mb-3"
-                        style="width:60px; height:60px;">
-                        <i class="bi bi-kanban fs-4 text-success"></i>
+                  
+                  <!-- Sports Achievements -->
+                  <div class="col-md-6 mb-4 mb-md-0">
+                    <div class="card h-100 border-0 shadow-sm rounded-4">
+                      <div class="card-body p-4">
+                        <h5 class="fw-bold mb-3 text-success"><i class="bi bi-activity me-2"></i> Olahraga</h5>
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item d-flex justify-content-between align-items-center border-0 py-2">
+                            Juara 1 Turnamen Futsal Pelajar
+                            <span class="badge bg-success rounded-pill">2023</span>
+                          </li>
+                          <li class="list-group-item d-flex justify-content-between align-items-center border-0 py-2">
+                            Juara 2 Pencak Silat Antar Sekolah
+                            <span class="badge bg-success rounded-pill">2022</span>
+                          </li>
+                          <li class="list-group-item d-flex justify-content-between align-items-center border-0 py-2">
+                            Juara 3 Lomba Atletik
+                            <span class="badge bg-success rounded-pill">2023</span>
+                          </li>
+                        </ul>
                       </div>
-                      <h5 class="fw-bold">Project-Based Learning</h5>
-                      <p class="text-secondary">
-                        Pembelajaran berbasis proyek yang mengembangkan kreativitas dan kemampuan berpikir kritis siswa.
-                      </p>
+                    </div>
+                  </div>
+                  
+                  <!-- Arts Achievements -->
+                  <div class="col-md-6">
+                    <div class="card h-100 border-0 shadow-sm rounded-4">
+                      <div class="card-body p-4">
+                        <h5 class="fw-bold mb-3 text-success"><i class="bi bi-palette-fill me-2"></i> Seni</h5>
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item d-flex justify-content-between align-items-center border-0 py-2">
+                            Juara 1 Festival Nasyid Nasional
+                            <span class="badge bg-success rounded-pill">2023</span>
+                          </li>
+                          <li class="list-group-item d-flex justify-content-between align-items-center border-0 py-2">
+                            Juara 2 Lomba Puisi Islami
+                            <span class="badge bg-success rounded-pill">2022</span>
+                          </li>
+                          <li class="list-group-item d-flex justify-content-between align-items-center border-0 py-2">
+                            Juara 3 Lomba Melukis
+                            <span class="badge bg-success rounded-pill">2023</span>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -428,594 +702,559 @@
             </div>
           </div>
         </div>
-
-        <!-- Ekstrakurikuler Content -->
-        <div id="ekstrakurikuler" class="akademik-pane active">
-          <div class="row justify-content-center">
-            <div class="col-md-10">
-              <div class="card border-0 shadow-sm rounded-4">
-                <div class="card-body p-4">
-                  <h4 class="fw-bold mb-4 text-center">Program Ekstrakurikuler</h4>
-
-                  <!-- Original Ekstrakurikuler Content -->
-                  <div class="row">
-                    <!-- Klub Sains -->
-                    <div class="col-md-6 mb-3">
-                      <div class="d-flex align-items-center p-3 bg-light rounded-3 h-100">
-                        <div
-                          class="icon-wrapper bg-success bg-opacity-10 rounded-circle d-flex justify-content-center align-items-center flex-shrink-0"
-                          style="width:50px; height:50px;">
-                          <i class="bi bi-robot text-success fs-5"></i>
-                        </div>
-                        <div class="ms-3">
-                          <h6 class="fw-bold mb-1">Klub Sains</h6>
-                          <p class="text-secondary small mb-0">Pengembangan minat dan bakat di bidang sains dan
-                            teknologi.</p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- English Club -->
-                    <div class="col-md-6 mb-3">
-                      <div class="d-flex align-items-center p-3 bg-light rounded-3 h-100">
-                        <div
-                          class="icon-wrapper bg-success bg-opacity-10 rounded-circle d-flex justify-content-center align-items-center flex-shrink-0"
-                          style="width:50px; height:50px;">
-                          <i class="bi bi-translate text-success fs-5"></i>
-                        </div>
-                        <div class="ms-3">
-                          <h6 class="fw-bold mb-1">English Club</h6>
-                          <p class="text-secondary small mb-0">Pengembangan kemampuan berbahasa Inggris melalui diskusi
-                            dan debat.</p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- Basket dan Futsal -->
-                    <div class="col-md-6 mb-3">
-                      <div class="d-flex align-items-center p-3 bg-light rounded-3 h-100">
-                        <div
-                          class="icon-wrapper bg-success bg-opacity-10 rounded-circle d-flex justify-content-center align-items-center flex-shrink-0"
-                          style="width:50px; height:50px;">
-                          <i class="bi bi-basket text-success fs-5"></i>
-                        </div>
-                        <div class="ms-3">
-                          <h6 class="fw-bold mb-1">Basket dan Futsal</h6>
-                          <p class="text-secondary small mb-0">Pengembangan kemampuan olahraga dan jiwa sportivitas.</p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- Pencak Silat -->
-                    <div class="col-md-6 mb-3">
-                      <div class="d-flex align-items-center p-3 bg-light rounded-3 h-100">
-                        <div
-                          class="icon-wrapper bg-success bg-opacity-10 rounded-circle d-flex justify-content-center align-items-center flex-shrink-0"
-                          style="width:50px; height:50px;">
-                          <i class="bi bi-shield-shaded text-success fs-5"></i>
-                        </div>
-                        <div class="ms-3">
-                          <h6 class="fw-bold mb-1">Pencak Silat</h6>
-                          <p class="text-secondary small mb-0">Seni bela diri tradisional yang mengembangkan fisik dan
-                            mental.</p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- Qira'ah dan Tilawah -->
-                    <div class="col-md-6 mb-3">
-                      <div class="d-flex align-items-center p-3 bg-light rounded-3 h-100">
-                        <div
-                          class="icon-wrapper bg-success bg-opacity-10 rounded-circle d-flex justify-content-center align-items-center flex-shrink-0"
-                          style="width:50px; height:50px;">
-                          <i class="bi bi-book text-success fs-5"></i>
-                        </div>
-                        <div class="ms-3">
-                          <h6 class="fw-bold mb-1">Qira'ah dan Tilawah</h6>
-                          <p class="text-secondary small mb-0">Pengembangan kemampuan membaca Al-Quran dengan tajwid dan
-                            lagu yang indah.</p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- Kaligrafi Islam -->
-                    <div class="col-md-6 mb-3">
-                      <div class="d-flex align-items-center p-3 bg-light rounded-3 h-100">
-                        <div
-                          class="icon-wrapper bg-success bg-opacity-10 rounded-circle d-flex justify-content-center align-items-center flex-shrink-0"
-                          style="width:50px; height:50px;">
-                          <i class="bi bi-pen text-success fs-5"></i>
-                        </div>
-                        <div class="ms-3">
-                          <h6 class="fw-bold mb-1">Kaligrafi Islam</h6>
-                          <p class="text-secondary small mb-0">Seni menulis indah huruf Arab dan kaligrafi Al-Quran.</p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- Dai Muda -->
-                    <div class="col-md-6 mb-3 mb-md-0">
-                      <div class="d-flex align-items-center p-3 bg-light rounded-3 h-100">
-                        <div
-                          class="icon-wrapper bg-success bg-opacity-10 rounded-circle d-flex justify-content-center align-items-center flex-shrink-0"
-                          style="width:50px; height:50px;">
-                          <i class="bi bi-megaphone text-success fs-5"></i>
-                        </div>
-                        <div class="ms-3">
-                          <h6 class="fw-bold mb-1">Dai Muda</h6>
-                          <p class="text-secondary small mb-0">Pengembangan kemampuan berdakwah dan public speaking.</p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- Nasyid -->
-                    <div class="col-md-6">
-                      <div class="d-flex align-items-center p-3 bg-light rounded-3 h-100">
-                        <div
-                          class="icon-wrapper bg-success bg-opacity-10 rounded-circle d-flex justify-content-center align-items-center flex-shrink-0"
-                          style="width:50px; height:50px;">
-                          <i class="bi bi-music-note-beamed text-success fs-5"></i>
-                        </div>
-                        <div class="ms-3">
-                          <h6 class="fw-bold mb-1">Nasyid</h6>
-                          <p class="text-secondary small mb-0">Grup vokal islami yang menyanyikan lagu-lagu bernuansa
-                            religi.</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- Image Gallery Row -->
-                <div class="row mb-4">
-                  <!-- Image 1 -->
-                  <div class="col-md-4 mb-3 mb-md-0">
-                    <div class="ekskul-image-container shadow-sm">
-                      <img src="img/school.jpg" alt="Kegiatan Olahraga" class="ekskul-image">
-                    </div>
-                  </div>
-
-                  <!-- Image 2 -->
-                  <div class="col-md-4 mb-3 mb-md-0">
-                    <div class="ekskul-image-container shadow-sm">
-                      <img src="img/school.jpg" alt="Kegiatan Seni Islami" class="ekskul-image">
-                    </div>
-                  </div>
-
-                  <!-- Image 3 -->
-                  <div class="col-md-4">
-                    <div class="ekskul-image-container shadow-sm">
-                      <img src="img/school.jpg" alt="Kegiatan Akademik" class="ekskul-image">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-        <!-- Prestasi Content -->
-        <div id="prestasi" class="akademik-pane active">
-          <div class="container py-5">
-            <div class="row">
-              <!-- Prestasi Akademik Column -->
-              <div class="col-lg-6">
-                <h2 class="prestasi-title">Prestasi Akademik</h2>
-
-                <!-- Achievement Item 1 -->
-                <div class="achievement-item">
-                  <div class="achievement-icon">
-                    <i class="bi bi-trophy"></i>
-                  </div>
-                  <div class="achievement-content">
-                    <h5>Juara 1 Olimpiade Matematika Tingkat Nasional 2024</h5>
-                    <p>Ahmad Fauzi, siswa kelas XII IPA berhasil meraih medali emas dalam Olimpiade Matematika Nasional
-                      2024.</p>
-                  </div>
-                </div>
-
-                <!-- Achievement Item 2 -->
-                <div class="achievement-item">
-                  <div class="achievement-icon">
-                    <i class="bi bi-trophy"></i>
-                  </div>
-                  <div class="achievement-content">
-                    <h5>Juara 2 Kompetisi Sains Nasional Bidang Fisika 2023</h5>
-                    <p>Zahra Putri, siswa kelas XI IPA berhasil meraih medali perak dalam KSN Bidang Fisika 2023.</p>
-                  </div>
-                </div>
-
-                <!-- Achievement Item 3 -->
-                <div class="achievement-item">
-                  <div class="achievement-icon">
-                    <i class="bi bi-trophy"></i>
-                  </div>
-                  <div class="achievement-content">
-                    <h5>Juara 1 Debat Bahasa Inggris Tingkat Provinsi 2024</h5>
-                    <p>Tim Debat SMA Al-Quran berhasil meraih juara 1 dalam Kompetisi Debat Bahasa Inggris Tingkat
-                      Provinsi 2024.</p>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Prestasi Keislaman Column -->
-              <div class="col-lg-6">
-                <h2 class="prestasi-title">Prestasi Keislaman</h2>
-
-                <!-- Achievement Item 1 -->
-                <div class="achievement-item">
-                  <div class="achievement-icon">
-                    <i class="bi bi-trophy"></i>
-                  </div>
-                  <div class="achievement-content">
-                    <h5>Juara 1 Musabaqah Hifdzil Quran Tingkat Nasional 2024</h5>
-                    <p>Muhammad Hafiz, siswa kelas XI berhasil meraih juara 1 dalam MTQ Cabang Hifdzil Quran 20 Juz
-                      Tingkat Nasional.</p>
-                  </div>
-                </div>
-
-                <!-- Achievement Item 2 -->
-                <div class="achievement-item">
-                  <div class="achievement-icon">
-                    <i class="bi bi-trophy"></i>
-                  </div>
-                  <div class="achievement-content">
-                    <h5>Juara 1 Kaligrafi Islam Tingkat Provinsi 2023</h5>
-                    <p>Aisyah Ramadhani, siswa kelas X berhasil meraih juara 1 dalam Lomba Kaligrafi Islam Tingkat
-                      Provinsi 2023.</p>
-                  </div>
-                </div>
-
-                <!-- Achievement Item 3 -->
-                <div class="achievement-item">
-                  <div class="achievement-icon">
-                    <i class="bi bi-trophy"></i>
-                  </div>
-                  <div class="achievement-content">
-                    <h5>Juara 2 Kompetisi Dai Remaja Tingkat Nasional 2024</h5>
-                    <p>Fatimah Azzahra, siswa kelas XII berhasil meraih juara 2 dalam Kompetisi Dai Remaja Tingkat
-                      Nasional 2024.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Testimonial Section -->
-            <h2 class="testimonial-title">Testimoni Alumni</h2>
-            <div class="row">
-              <!-- Testimonial 1 -->
-              <div class="col-lg-6 mb-4">
-                <div class="testimonial-card">
-                  <div class="testimonial-avatar">
-                    <img src="img/school.jpg" alt="Irfan Hakim">
-                  </div>
-                  <h4 class="testimonial-name">Irfan Hakim</h4>
-                  <p class="testimonial-info">Lulusan 2020, Mahasiswa Kedokteran UI</p>
-                  <p class="testimonial-text">SMA Al-Quran memberikan fondasi yang kuat untuk saya, baik dari segi
-                    akademik maupun akhlak. Program tahfiz membantu saya menjadi pribadi yang lebih disiplin dan fokus.
-                    Alhamdulillah, berkat pendidikan di sini, saya bisa diterima di Fakultas Kedokteran UI.</p>
-                </div>
-              </div>
-
-              <!-- Testimonial 2 -->
-              <div class="col-lg-6 mb-4">
-                <div class="testimonial-card">
-                  <div class="testimonial-avatar">
-                    <img src="img/school.jpg" alt="Siti Nurhaliza">
-                  </div>
-                  <h4 class="testimonial-name">Siti Nurhaliza</h4>
-                  <p class="testimonial-info">Lulusan 2021, Mahasiswa Teknik ITB</p>
-                  <p class="testimonial-text">Pendidikan di SMA Al-Quran sangat komprehensif. Selain unggul dalam
-                    akademik, saya juga mendapatkan pendidikan karakter yang kuat. Bekal Al-Quran yang saya dapatkan
-                    menjadi bekal berharga dalam menghadapi kehidupan kampus yang penuh tantangan.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
         <!-- Prestasi & Pencapaian Section -->
-        <div class="container py-5">
-          <!-- Header Section -->
-          <div class="section-header mb-5">
-            <h1 class="section-title">Prestasi & Pencapaian</h1>
-            <p class="section-description">Perjalanan keberhasilan kami dalam membentuk generasi unggul yang berprestasi
-              dalam berbagai bidang.</p>
+<section id="prestasi-pencapaian" class="py-5 bg-light">
+  <div class="container">
+    <!-- Header Section -->
+    <div class="section-header text-center mb-5">
+      <h2 class="fw-bold section-title">Prestasi & Pencapaian</h2>
+      <p class="text-secondary section-description">
+        Perjalanan keberhasilan kami dalam membentuk generasi unggul yang berprestasi dalam berbagai bidang.
+      </p>
+    </div>
+
+    <!-- Main Content -->
+    <div class="row">
+      <!-- Prestasi Akademik Column -->
+      <div class="col-lg-6 mb-5">
+        <h3 class="fw-bold mb-4 prestasi-title">Prestasi Akademik</h3>
+
+        <!-- Achievement Item 1 -->
+        <div class="achievement-item mb-4 p-4 bg-white rounded-4 shadow-sm">
+          <div class="d-flex">
+            <div class="achievement-icon bg-success bg-opacity-10 text-success rounded-circle d-flex align-items-center justify-content-center me-4" style="width: 50px; height: 50px;">
+              <i class="bi bi-trophy fs-5"></i>
+            </div>
+            <div class="achievement-content">
+              <h5 class="fw-bold">Juara 1 Olimpiade Matematika Tingkat Nasional 2024</h5>
+              <p class="text-secondary mb-0">Ahmad Fauzi, siswa kelas XII IPA berhasil meraih medali emas dalam Olimpiade Matematika Nasional 2024.</p>
+            </div>
           </div>
+        </div>
 
-          <div class="row">
-            <!-- Timeline Prestasi Column -->
-            <div class="col-lg-5">
-              <h2 class="mb-4">Timeline Prestasi</h2>
-              <div class="timeline-container">
-                <!-- 2024 -->
-                <div class="timeline-item">
-                  <div class="timeline-icon">
-                    <i class="bi bi-calendar3"></i>
-                  </div>
-                  <div class="timeline-year">2024</div>
-                  <div class="timeline-content">
-                    Meraih 15 medali dalam berbagai kompetisi nasional dan internasional, termasuk Olimpiade Sains, MTQ,
-                    dan Kompetisi Robotik.
-                  </div>
-                </div>
-
-                <!-- 2023 -->
-                <div class="timeline-item">
-                  <div class="timeline-icon">
-                    <i class="bi bi-calendar3"></i>
-                  </div>
-                  <div class="timeline-year">2023</div>
-                  <div class="timeline-content">
-                    Meraih akreditasi A+ dan menjadi sekolah dengan tingkat kelulusan 100% dengan nilai rata-rata
-                    tertinggi se-provinsi.
-                  </div>
-                </div>
-
-                <!-- 2022 -->
-                <div class="timeline-item">
-                  <div class="timeline-icon">
-                    <i class="bi bi-calendar3"></i>
-                  </div>
-                  <div class="timeline-year">2022</div>
-                  <div class="timeline-content">
-                    Menjadi juara umum dalam Festival Sains dan Teknologi Tingkat Nasional dan menghasilkan 25 hafiz
-                    Quran 30 juz.
-                  </div>
-                </div>
-
-                <!-- 2021 -->
-                <div class="timeline-item">
-                  <div class="timeline-icon">
-                    <i class="bi bi-calendar3"></i>
-                  </div>
-                  <div class="timeline-year">2021</div>
-                  <div class="timeline-content">
-                    Meraih penghargaan sebagai Sekolah Islam Berprestasi Tingkat Nasional dari Kementerian Pendidikan
-                    dan Kebudayaan.
-                  </div>
-                </div>
-              </div>
+        <!-- Achievement Item 2 -->
+        <div class="achievement-item mb-4 p-4 bg-white rounded-4 shadow-sm">
+          <div class="d-flex">
+            <div class="achievement-icon bg-success bg-opacity-10 text-success rounded-circle d-flex align-items-center justify-content-center me-4" style="width: 50px; height: 50px;">
+              <i class="bi bi-trophy fs-5"></i>
             </div>
-
-            <!-- Pencapaian Hafalan Al-Quran Column -->
-            <div class="col-lg-7">
-              <h2 class="mb-4">Pencapaian Hafalan Al-Quran</h2>
-              <div class="graph-container" id="graph-container">
-                <canvas id="hafalanChart" width="100%" height="300"></canvas>
-              </div>
+            <div class="achievement-content">
+              <h5 class="fw-bold">Juara 2 Kompetisi Sains Nasional Bidang Fisika 2023</h5>
+              <p class="text-secondary mb-0">Zahra Putri, siswa kelas XI IPA berhasil meraih medali perak dalam KSN Bidang Fisika 2023.</p>
             </div>
+          </div>
+        </div>
 
+        <!-- Achievement Item 3 -->
+        <div class="achievement-item p-4 bg-white rounded-4 shadow-sm">
+          <div class="d-flex">
+            <div class="achievement-icon bg-success bg-opacity-10 text-success rounded-circle d-flex align-items-center justify-content-center me-4" style="width: 50px; height: 50px;">
+              <i class="bi bi-trophy fs-5"></i>
+            </div>
+            <div class="achievement-content">
+              <h5 class="fw-bold">Juara 1 Debat Bahasa Inggris Tingkat Provinsi 2024</h5>
+              <p class="text-secondary mb-0">Tim Debat SMA Al-Quran berhasil meraih juara 1 dalam Kompetisi Debat Bahasa Inggris Tingkat Provinsi 2024.</p>
+            </div>
+          </div>
+        </div>
+      </div>
 
-            <!-- Galeri Prestasi Section -->
-            <div class="mt-5">
-              <h2 class="gallery-title mb-4">Galeri Prestasi</h2>
-              <div class="row">
-                <!-- Gallery Top Row -->
-                <div class="col-md-4">
-                  <div class="gallery-item">
-                    <img src="img/school.jpg" alt="Kompetisi Pidato" class="gallery-image">
-                    <div class="gallery-overlay">
-                      <div class="gallery-description">
-                        <h5 class="text-white mb-2">Kompetisi Pidato Tingkat Nasional</h5>
-                        <p class="mb-0">Para siswi kami menerima penghargaan dalam kompetisi pidato Bahasa Arab dan
-                          Inggris tingkat nasional tahun 2023.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+      <!-- Prestasi Keislaman Column -->
+      <div class="col-lg-6 mb-5">
+        <h3 class="fw-bold mb-4 prestasi-title">Prestasi Keislaman</h3>
 
-                <div class="col-md-4">
-                  <div class="gallery-item">
-                    <img src="img/school.jpg" alt="Kegiatan Tahfidz" class="gallery-image">
-                    <div class="gallery-overlay">
-                      <div class="gallery-description">
-                        <h5 class="text-white mb-2">Program Tahfidzul Quran</h5>
-                        <p class="mb-0">Siswa-siswi sedang mengikuti program intensif hafalan Al-Quran yang merupakan
-                          program unggulan sekolah kami.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+        <!-- Achievement Item 1 -->
+        <div class="achievement-item mb-4 p-4 bg-white rounded-4 shadow-sm">
+          <div class="d-flex">
+            <div class="achievement-icon bg-success bg-opacity-10 text-success rounded-circle d-flex align-items-center justify-content-center me-4" style="width: 50px; height: 50px;">
+              <i class="bi bi-trophy fs-5"></i>
+            </div>
+            <div class="achievement-content">
+              <h5 class="fw-bold">Juara 1 Musabaqah Hifdzil Quran Tingkat Nasional 2024</h5>
+              <p class="text-secondary mb-0">Muhammad Hafiz, siswa kelas XI berhasil meraih juara 1 dalam MTQ Cabang Hifdzil Quran 20 Juz Tingkat Nasional.</p>
+            </div>
+          </div>
+        </div>
 
-                <div class="col-md-4">
-                  <div class="gallery-item">
-                    <img src="img/school.jpg" alt="Praktikum Robotik" class="gallery-image">
-                    <div class="gallery-overlay">
-                      <div class="gallery-description">
-                        <h5 class="text-white mb-2">Praktikum Robotik & Teknologi</h5>
-                        <p class="mb-0">Siswi kami sedang melakukan praktikum robotik sebagai bagian dari kurikulum
-                          sains dan teknologi.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+        <!-- Achievement Item 2 -->
+        <div class="achievement-item mb-4 p-4 bg-white rounded-4 shadow-sm">
+          <div class="d-flex">
+            <div class="achievement-icon bg-success bg-opacity-10 text-success rounded-circle d-flex align-items-center justify-content-center me-4" style="width: 50px; height: 50px;">
+              <i class="bi bi-trophy fs-5"></i>
+            </div>
+            <div class="achievement-content">
+              <h5 class="fw-bold">Juara 1 Kaligrafi Islam Tingkat Provinsi 2023</h5>
+              <p class="text-secondary mb-0">Aisyah Ramadhani, siswa kelas X berhasil meraih juara 1 dalam Lomba Kaligrafi Islam Tingkat Provinsi 2023.</p>
+            </div>
+          </div>
+        </div>
 
-                <!-- Gallery Bottom Row -->
-                <div class="col-md-4">
-                  <div class="gallery-item">
-                    <img src="img/school.jpg" alt="Dai Muda" class="gallery-image">
-                    <div class="gallery-overlay">
-                      <div class="gallery-description">
-                        <h5 class="text-white mb-2">Program Dai Muda</h5>
-                        <p class="mb-0">Pelatihan public speaking dan dakwah untuk mempersiapkan siswa menjadi dai yang
-                          kompeten di masyarakat.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+        <!-- Achievement Item 3 -->
+        <div class="achievement-item p-4 bg-white rounded-4 shadow-sm">
+          <div class="d-flex">
+            <div class="achievement-icon bg-success bg-opacity-10 text-success rounded-circle d-flex align-items-center justify-content-center me-4" style="width: 50px; height: 50px;">
+              <i class="bi bi-trophy fs-5"></i>
+            </div>
+            <div class="achievement-content">
+              <h5 class="fw-bold">Juara 2 Kompetisi Dai Remaja Tingkat Nasional 2024</h5>
+              <p class="text-secondary mb-0">Fatimah Azzahra, siswa kelas XII berhasil meraih juara 2 dalam Kompetisi Dai Remaja Tingkat Nasional 2024.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-                <div class="col-md-4">
-                  <div class="gallery-item">
-                    <img src="img/school.jpg" alt="Kompetisi Sains" class="gallery-image">
-                    <div class="gallery-overlay">
-                      <div class="gallery-description">
-                        <h5 class="text-white mb-2">Kompetisi Sains & Inovasi</h5>
-                        <p class="mb-0">Siswa kami mempresentasikan proyek ilmiah pada kompetisi sains tingkat nasional
-                          yang diselenggarakan oleh Kementerian Pendidikan.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-md-4">
-                  <div class="gallery-item">
-                    <img src="img/school.jpg" alt="Kaligrafi" class="gallery-image">
-                    <div class="gallery-overlay">
-                      <div class="gallery-description">
-                        <h5 class="text-white mb-2">Pameran Kaligrafi Islam</h5>
-                        <p class="mb-0">Karya kaligrafi siswa dipamerkan dalam acara seni budaya Islam yang
-                          diselenggarakan di sekolah kami.</p>
-                      </div>
-                    </div>
-                  </div>
+    <!-- Timeline and Hafalan Section -->
+    <div class="row mb-5">
+      <!-- Timeline Prestasi Column -->
+      <div class="col-lg-5 mb-4 mb-lg-0">
+        <h3 class="fw-bold mb-4">Timeline Prestasi</h3>
+        <div class="timeline-container">
+          <!-- 2024 -->
+          <div class="timeline-item mb-4">
+            <div class="d-flex">
+              <div class="timeline-icon bg-success text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 40px; height: 40px;">
+                <i class="bi bi-calendar3"></i>
+              </div>
+              <div>
+                <div class="timeline-year fw-bold text-success mb-1">2024</div>
+                <div class="timeline-content text-secondary">
+                  Meraih 15 medali dalam berbagai kompetisi nasional dan internasional, termasuk Olimpiade Sains, MTQ, dan Kompetisi Robotik.
                 </div>
               </div>
             </div>
           </div>
+
+          <!-- 2023 -->
+          <div class="timeline-item mb-4">
+            <div class="d-flex">
+              <div class="timeline-icon bg-success text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 40px; height: 40px;">
+                <i class="bi bi-calendar3"></i>
+              </div>
+              <div>
+                <div class="timeline-year fw-bold text-success mb-1">2023</div>
+                <div class="timeline-content text-secondary">
+                  Meraih akreditasi A+ dan menjadi sekolah dengan tingkat kelulusan 100% dengan nilai rata-rata tertinggi se-provinsi.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2022 -->
+          <div class="timeline-item mb-4">
+            <div class="d-flex">
+              <div class="timeline-icon bg-success text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 40px; height: 40px;">
+                <i class="bi bi-calendar3"></i>
+              </div>
+              <div>
+                <div class="timeline-year fw-bold text-success mb-1">2022</div>
+                <div class="timeline-content text-secondary">
+                  Menjadi juara umum dalam Festival Sains dan Teknologi Tingkat Nasional dan menghasilkan 25 hafiz Quran 30 juz.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2021 -->
+          <div class="timeline-item">
+            <div class="d-flex">
+              <div class="timeline-icon bg-success text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 40px; height: 40px;">
+                <i class="bi bi-calendar3"></i>
+              </div>
+              <div>
+                <div class="timeline-year fw-bold text-success mb-1">2021</div>
+                <div class="timeline-content text-secondary">
+                  Meraih penghargaan sebagai Sekolah Islam Berprestasi Tingkat Nasional dari Kementerian Pendidikan dan Kebudayaan.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pencapaian Hafalan Al-Quran Column -->
+      <div class="col-lg-7">
+        <h3 class="fw-bold mb-4">Pencapaian Hafalan Al-Quran</h3>
+        <div class="graph-container bg-white p-4 rounded-4 shadow-sm">
+          <canvas id="hafalanChart" width="100%" height="300"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <!-- Testimonial Section -->
+    <div class="mb-5">
+      <h3 class="fw-bold text-center mb-4 testimonial-title">Testimoni Alumni</h3>
+      <div class="row">
+        <!-- Testimonial 1 -->
+        <div class="col-lg-6 mb-4">
+          <div class="testimonial-card p-4 bg-white rounded-4 shadow-sm h-100">
+            <div class="d-flex align-items-center mb-3">
+              <div class="testimonial-avatar me-3">
+                <img src="img/school.jpg" alt="Irfan Hakim" class="rounded-circle" style="width: 60px; height: 60px; object-fit: cover;">
+              </div>
+              <div>
+                <h4 class="fw-bold mb-0 testimonial-name">Irfan Hakim</h4>
+                <p class="text-secondary small testimonial-info">Lulusan 2020, Mahasiswa Kedokteran UI</p>
+              </div>
+            </div>
+            <p class="testimonial-text text-secondary">
+              SMA Al-Quran memberikan fondasi yang kuat untuk saya, baik dari segi akademik maupun akhlak. Program tahfiz membantu saya menjadi pribadi yang lebih disiplin dan fokus. Alhamdulillah, berkat pendidikan di sini, saya bisa diterima di Fakultas Kedokteran UI.
+            </p>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="col-lg-6 mb-4">
+          <div class="testimonial-card p-4 bg-white rounded-4 shadow-sm h-100">
+            <div class="d-flex align-items-center mb-3">
+              <div class="testimonial-avatar me-3">
+                <img src="img/school.jpg" alt="Siti Nurhaliza" class="rounded-circle" style="width: 60px; height: 60px; object-fit: cover;">
+              </div>
+              <div>
+                <h4 class="fw-bold mb-0 testimonial-name">Siti Nurhaliza</h4>
+                <p class="text-secondary small testimonial-info">Lulusan 2021, Mahasiswa Teknik ITB</p>
+              </div>
+            </div>
+            <p class="testimonial-text text-secondary">
+              Pendidikan di SMA Al-Quran sangat komprehensif. Selain unggul dalam akademik, saya juga mendapatkan pendidikan karakter yang kuat. Bekal Al-Quran yang saya dapatkan menjadi bekal berharga dalam menghadapi kehidupan kampus yang penuh tantangan.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Galeri Prestasi Section -->
+    <div>
+      <h3 class="fw-bold text-center mb-4 gallery-title">Galeri Prestasi</h3>
+      <div class="row">
+        <!-- Gallery Top Row -->
+        <div class="col-md-4 mb-4">
+          <div class="gallery-item position-relative rounded-4 overflow-hidden shadow-sm">
+            <img src="img/pidato.jpg" alt="Kompetisi Pidato" class="gallery-image w-100" style="height: 250px; object-fit: cover;">
+            <div class="gallery-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-end p-3" style="background: rgba(0,0,0,0.5);">
+              <div class="gallery-description text-white">
+                <h5 class="mb-2">Kompetisi Pidato Tingkat Nasional</h5>
+                <p class="mb-0 small">Para siswi kami menerima penghargaan dalam kompetisi pidato Bahasa Arab dan Inggris tingkat nasional tahun 2023.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="gallery-item position-relative rounded-4 overflow-hidden shadow-sm">
+            <img src="img/tahfidz.jpg" alt="Kegiatan Tahfidz" class="gallery-image w-100" style="height: 250px; object-fit: cover;">
+            <div class="gallery-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-end p-3" style="background: rgba(0,0,0,0.5);">
+              <div class="gallery-description text-white">
+                <h5 class="mb-2">Program Tahfidzul Quran</h5>
+                <p class="mb-0 small">Siswa-siswi sedang mengikuti program intensif hafalan Al-Quran yang merupakan program unggulan sekolah kami.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+          <div class="gallery-item position-relative rounded-4 overflow-hidden shadow-sm">
+            <img src="img/robotik.jpg" alt="Praktikum Robotik" class="gallery-image w-100" style="height: 250px; object-fit: cover;">
+            <div class="gallery-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-end p-3" style="background: rgba(0,0,0,0.5);">
+              <div class="gallery-description text-white">
+                <h5 class="mb-2">Praktikum Robotik & Teknologi</h5>
+                <p class="mb-0 small">Siswi kami sedang melakukan praktikum robotik sebagai bagian dari kurikulum sains dan teknologi.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gallery Bottom Row -->
+        <div class="col-md-4 mb-4 mb-md-0">
+          <div class="gallery-item position-relative rounded-4 overflow-hidden shadow-sm">
+            <img src="img/dai.jpg" alt="Dai Muda" class="gallery-image w-100" style="height: 250px; object-fit: cover;">
+            <div class="gallery-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-end p-3" style="background: rgba(0,0,0,0.5);">
+              <div class="gallery-description text-white">
+                <h5 class="mb-2">Program Dai Muda</h5>
+                <p class="mb-0 small">Pelatihan public speaking dan dakwah untuk mempersiapkan siswa menjadi dai yang kompeten di masyarakat.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-4 mb-md-0">
+          <div class="gallery-item position-relative rounded-4 overflow-hidden shadow-sm">
+            <img src="img/sains.jpeg" alt="Kompetisi Sains" class="gallery-image w-100" style="height: 250px; object-fit: cover;">
+            <div class="gallery-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-end p-3" style="background: rgba(0,0,0,0.5);">
+              <div class="gallery-description text-white">
+                <h5 class="mb-2">Kompetisi Sains & Inovasi</h5>
+                <p class="mb-0 small">Siswa kami mempresentasikan proyek ilmiah pada kompetisi sains tingkat nasional yang diselenggarakan oleh Kementerian Pendidikan.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="gallery-item position-relative rounded-4 overflow-hidden shadow-sm">
+            <img src="img/kaligrafi.jpg" alt="Kaligrafi" class="gallery-image w-100" style="height: 250px; object-fit: cover;">
+            <div class="gallery-overlay position-absolute top-0 start-0 w-100 h-100 d-flex align-items-end p-3" style="background: rgba(0,0,0,0.5);">
+              <div class="gallery-description text-white">
+                <h5 class="mb-2">Pameran Kaligrafi Islam</h5>
+                <p class="mb-0 small">Karya kaligrafi siswa dipamerkan dalam acara seni budaya Islam yang diselenggarakan di sekolah kami.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
           <!-- Berita & Agenda Section -->
-          <section class="py-5 bg-light">
-            <div class="container">
-              <!-- Title -->
-              <div class="text-center mb-4">
-                <h2 class="fw-bold">Berita & Agenda</h2>
-                <p class="text-secondary">Informasi terbaru tentang kegiatan dan pencapaian di SMA Al-Quran.</p>
-              </div>
+<section id="berita-agenda" class="py-5 bg-light">
+  <div class="container">
+    <!-- Title Section -->
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Berita & Agenda</h2>
+      <p class="text-secondary">Informasi terbaru tentang kegiatan dan pencapaian di SMA Al-Quran</p>
+    </div>
 
-              <div class="row g-4">
-                <!-- Left Side: Main News -->
-                <div class="col-md-8">
-                  <div class="card border-0 shadow-sm rounded-4">
-                    <img src="img/school.jpg" class="card-img-top" alt="Main News Image">
-                    <div class="card-body">
-                      <h4 class="card-title fw-bold">Wisuda Angkatan 2025: 100% Siswa Diterima di Perguruan Tinggi
-                        Terkenal</h4>
-                      <p class="card-text text-secondary">
-                        SMA Al-Quran kembali menorehkan prestasi gemilang dengan keberhasilan 100% lulusan angkatan 2025
-                        diterima di perguruan tinggi terkenal baik dalam maupun luar negeri...
-                      </p>
-                      <a href="#" class="btn btn-outline-success">Baca selengkapnya</a>
-                    </div>
-                  </div>
-
-                  <!-- Smaller News Section -->
-                  <div class="row g-4 mt-4">
-                    <div class="col-md-6">
-                      <div class="card border-0 shadow-sm rounded-4">
-                        <img src="img/school.jpg" class="card-img-top" alt="News Image 1">
-                        <div class="card-body">
-                          <h5 class="card-title">Siswi SMA Al-Quran Raih Juara 1 MTQ Tingkat Nasional</h5>
-                          <p class="card-text text-secondary">Muhammad Hafiz, siswa kelas 12 berprestasi meraih juara 1
-                            dalam Musabaqah Tilawatil Qur'an Tingkat Nasional...</p>
-                          <a href="#" class="btn btn-outline-success">Baca selengkapnya</a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="card border-0 shadow-sm rounded-4">
-                        <img src="img/school.jpg" class="card-img-top" alt="News Image 2">
-                        <div class="card-body">
-                          <h5 class="card-title">Tim Olimpiade Sains Raih 5 Medali di Kompetisi Internasional</h5>
-                          <p class="card-text text-secondary">Tim Olimpiade Sains SMA Al-Quran berhasil meraih 2 medali
-                            emas, 2 medali perak, dan 1 medali perunggu di kompetisi...</p>
-                          <a href="#" class="btn btn-outline-success">Baca selengkapnya</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- Berita dibawah -->
-                  <div class="row g-4 mt-4">
-                    <div class="col-md-6">
-                      <div class="card border-0 shadow-sm rounded-4">
-                        <img src="img/school.jpg" class="card-img-top" alt="News Image 1">
-                        <div class="card-body">
-                          <h5 class="card-title">Siswi SMA Al-Quran Raih Juara 1 MTQ Tingkat Nasional</h5>
-                          <p class="card-text text-secondary">Muhammad Hafiz, siswa kelas 12 berprestasi meraih juara 1
-                            dalam Musabaqah Tilawatil Qur'an Tingkat Nasional...</p>
-                          <a href="#" class="btn btn-outline-success">Baca selengkapnya</a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-6">
-                      <div class="card border-0 shadow-sm rounded-4">
-                        <img src="img/school.jpg" class="card-img-top" alt="News Image 2">
-                        <div class="card-body">
-                          <h5 class="card-title">Tim Olimpiade Sains Raih 5 Medali di Kompetisi Internasional</h5>
-                          <p class="card-text text-secondary">Tim Olimpiade Sains SMA Al-Quran berhasil meraih 2 medali
-                            emas, 2 medali perak, dan 1 medali perunggu di kompetisi...</p>
-                          <a href="#" class="btn btn-outline-success">Baca selengkapnya</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Right Side: Agenda -->
-                <div class="col-md-4">
-                  <div class="card border-0 shadow-sm rounded-4 p-4">
-                    <h4 class="fw-bold">Agenda Mendatang</h4>
-                    <ul class="list-unstyled">
-                      <li class="mb-3">
-                        <span class="date">APR 26</span>
-                        <span>Ujian Akhir Semester Genap</span>
-                      </li>
-                      <li class="mb-3">
-                        <span class="date">APR 28</span>
-                        <span>Seminar Persiapan SBMPTN</span>
-                      </li>
-                      <li class="mb-3">
-                        <span class="date">MEI 01</span>
-                        <span>Festival Sains & Teknologi</span>
-                      </li>
-                      <li class="mb-3">
-                        <span class="date">MEI 05</span>
-                        <span>Mushabaqah Hafidz Qur'an</span>
-                      </li>
-                      <li>
-                        <span class="date">MEI 20</span>
-                        <span>Wisuda Angkatan 2025</span>
-                      </li>
-                    </ul>
-
-                    <!-- Kategori Section -->
-                    <h5 class="mt-4 fw-bold">Kategori</h5>
-                    <ul class="list-unstyled">
-                      <li>
-                        Akademik
-                        <span class="badge">12</span>
-                      </li>
-                      <li>
-                        Keislaman
-                        <span class="badge">8</span>
-                      </li>
-                      <li>
-                        Prestasi
-                        <span class="badge">15</span>
-                      </li>
-                      <li>
-                        Ekstrakurikuler
-                        <span class="badge">6</span>
-                      </li>
-                      <li>
-                        Pengumuman
-                        <span class="badge">10</span>
-                      </li>
-                    </ul>
-
-                    <!-- Berlangganan Section -->
-                    <h5 class="mt-4 fw-bold">Berlangganan Berita</h5>
-                    <form>
-                      <input type="email" class="form-control mb-2" placeholder="Alamat Email" required>
-                      <button type="submit" class="btn btn-primary">Berlangganan</button>
-                    </form>
-                  </div>
+    <div class="row g-4">
+      <!-- Left Column: News Section -->
+      <div class="col-lg-8">
+        <!-- Main Featured News -->
+        <div class="card border-0 shadow-sm rounded-4 overflow-hidden mb-4">
+          <div class="row g-0">
+            <div class="col-md-5">
+              <img src="img/wisuda.jpg" class="img-fluid h-100" alt="Main News Image" style="object-fit: cover;">
+            </div>
+            <div class="col-md-7">
+              <div class="card-body">
+                <div class="badge bg-success mb-2">Prestasi</div>
+                <h3 class="card-title fw-bold">Wisuda Angkatan 2025: 100% Siswa Diterima di Perguruan Tinggi Terkenal</h3>
+                <p class="card-text text-secondary">
+                  SMA Al-Quran kembali menorehkan prestasi gemilang dengan keberhasilan 100% lulusan angkatan 2025
+                  diterima di perguruan tinggi terkenal baik dalam maupun luar negeri, termasuk UI, ITB, UGM, dan beberapa universitas di Timur Tengah.
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <small class="text-muted">25 April 2025</small>
+                  <a href="#" class="btn btn-outline-success btn-sm">Baca Selengkapnya</a>
                 </div>
               </div>
             </div>
-          </section>
+          </div>
+        </div>
+
+        <!-- News Grid -->
+        <div class="row g-4">
+          <!-- News Item 1 -->
+          <div class="col-md-6">
+            <div class="card border-0 shadow-sm rounded-4 h-100">
+              <img src="img/siswi.jpg" class="card-img-top" alt="News Image 1" style="height: 180px; object-fit: cover;">
+              <div class="card-body">
+                <div class="badge bg-success mb-2">Keislaman</div>
+                <h5 class="card-title fw-bold">Siswi SMA Al-Quran Raih Juara 1 MTQ Tingkat Nasional</h5>
+                <p class="card-text text-secondary">Muhammad Hafiz, siswa kelas 12 berprestasi meraih juara 1 dalam Musabaqah Tilawatil Qur'an Tingkat Nasional kategori tilawah.</p>
+              </div>
+              <div class="card-footer bg-transparent border-0">
+                <div class="d-flex justify-content-between align-items-center">
+                  <small class="text-muted">20 April 2025</small>
+                  <a href="#" class="btn btn-outline-success btn-sm">Baca</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- News Item 2 -->
+          <div class="col-md-6">
+            <div class="card border-0 shadow-sm rounded-4 h-100">
+              <img src="img/juarasains.jpg" class="card-img-top" alt="News Image 2" style="height: 180px; object-fit: cover;">
+              <div class="card-body">
+                <div class="badge bg-success mb-2">Akademik</div>
+                <h5 class="card-title fw-bold">Tim Olimpiade Sains Raih 5 Medali di Kompetisi Internasional</h5>
+                <p class="card-text text-secondary">Tim Olimpiade Sains SMA Al-Quran berhasil meraih 2 medali emas, 2 medali perak, dan 1 medali perunggu di kompetisi ISPO 2025.</p>
+              </div>
+              <div class="card-footer bg-transparent border-0">
+                <div class="d-flex justify-content-between align-items-center">
+                  <small class="text-muted">15 April 2025</small>
+                  <a href="#" class="btn btn-outline-success btn-sm">Baca</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- News Item 3 -->
+          <div class="col-md-6">
+            <div class="card border-0 shadow-sm rounded-4 h-100">
+              <img src="img/juararobotik.jpeg" class="card-img-top" alt="News Image 3" style="height: 180px; object-fit: cover;">
+              <div class="card-body">
+                <div class="badge bg-success mb-2">Ekstrakurikuler</div>
+                <h5 class="card-title fw-bold">Tim Robotik SMA Al-Quran Lolos Kejuaraan Dunia</h5>
+                <p class="card-text text-secondary">Tim Robotik sekolah berhasil lolos ke kompetisi FIRST Global Challenge setelah memenangkan kompetisi regional.</p>
+              </div>
+              <div class="card-footer bg-transparent border-0">
+                <div class="d-flex justify-content-between align-items-center">
+                  <small class="text-muted">10 April 2025</small>
+                  <a href="#" class="btn btn-outline-success btn-sm">Baca</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- News Item 4 -->
+          <div class="col-md-6">
+            <div class="card border-0 shadow-sm rounded-4 h-100">
+              <img src="img/ppdb.jpg" class="card-img-top" alt="News Image 4" style="height: 180px; object-fit: cover;">
+              <div class="card-body">
+                <div class="badge bg-success mb-2">Pengumuman</div>
+                <h5 class="card-title fw-bold">Penerimaan Peserta Didik Baru Tahun Ajaran 2025/2026</h5>
+                <p class="card-text text-secondary">Pendaftaran PPDB dibuka mulai 1 Mei 2025. Kuota terbatas untuk 120 siswa baru.</p>
+              </div>
+              <div class="card-footer bg-transparent border-0">
+                <div class="d-flex justify-content-between align-items-center">
+                  <small class="text-muted">5 April 2025</small>
+                  <a href="#" class="btn btn-outline-success btn-sm">Baca</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- View All News Button -->
+        <div class="text-center mt-4">
+          <a href="#" class="btn btn-success px-4">Lihat Semua Berita</a>
+        </div>
+      </div>
+
+      <!-- Right Column: Agenda & Sidebar -->
+      <div class="col-lg-4">
+        <!-- Upcoming Events Card -->
+        <div class="card border-0 shadow-sm rounded-4 mb-4">
+          <div class="card-body">
+            <h4 class="fw-bold mb-4 text-success">
+              <i class="bi bi-calendar-event me-2"></i> Agenda Mendatang
+            </h4>
+            
+            <div class="agenda-list">
+              <!-- Event 1 -->
+              <div class="d-flex mb-3 pb-2 border-bottom">
+                <div class="date-box bg-success bg-opacity-10 text-success text-center rounded-3 me-3" style="width: 60px;">
+                  <div class="fw-bold fs-5">26</div>
+                  <div class="small">APR</div>
+                </div>
+                <div>
+                  <h6 class="fw-bold mb-1">Ujian Akhir Semester Genap</h6>
+                  <small class="text-muted"><i class="bi bi-clock me-1"></i> 08.00 - 12.00 WIB</small>
+                </div>
+              </div>
+              
+              <!-- Event 2 -->
+              <div class="d-flex mb-3 pb-2 border-bottom">
+                <div class="date-box bg-success bg-opacity-10 text-success text-center rounded-3 me-3" style="width: 60px;">
+                  <div class="fw-bold fs-5">28</div>
+                  <div class="small">APR</div>
+                </div>
+                <div>
+                  <h6 class="fw-bold mb-1">Seminar Persiapan SBMPTN</h6>
+                  <small class="text-muted"><i class="bi bi-clock me-1"></i> 09.00 - 15.00 WIB</small>
+                </div>
+              </div>
+              
+              <!-- Event 3 -->
+              <div class="d-flex mb-3 pb-2 border-bottom">
+                <div class="date-box bg-success bg-opacity-10 text-success text-center rounded-3 me-3" style="width: 60px;">
+                  <div class="fw-bold fs-5">01</div>
+                  <div class="small">MEI</div>
+                </div>
+                <div>
+                  <h6 class="fw-bold mb-1">Festival Sains & Teknologi</h6>
+                  <small class="text-muted"><i class="bi bi-clock me-1"></i> 08.00 - 17.00 WIB</small>
+                </div>
+              </div>
+              
+              <!-- Event 4 -->
+              <div class="d-flex mb-3 pb-2 border-bottom">
+                <div class="date-box bg-success bg-opacity-10 text-success text-center rounded-3 me-3" style="width: 60px;">
+                  <div class="fw-bold fs-5">05</div>
+                  <div class="small">MEI</div>
+                </div>
+                <div>
+                  <h6 class="fw-bold mb-1">Mushabaqah Hafidz Qur'an</h6>
+                  <small class="text-muted"><i class="bi bi-clock me-1"></i> 08.00 - selesai</small>
+                </div>
+              </div>
+              
+              <!-- Event 5 -->
+              <div class="d-flex">
+                <div class="date-box bg-success bg-opacity-10 text-success text-center rounded-3 me-3" style="width: 60px;">
+                  <div class="fw-bold fs-5">20</div>
+                  <div class="small">MEI</div>
+                </div>
+                <div>
+                  <h6 class="fw-bold mb-1">Wisuda Angkatan 2025</h6>
+                  <small class="text-muted"><i class="bi bi-clock me-1"></i> 08.00 - 12.00 WIB</small>
+                </div>
+              </div>
+            </div>
+            
+            <div class="text-center mt-3">
+              <a href="#" class="btn btn-outline-success btn-sm">Lihat Kalender Lengkap</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Categories Card -->
+        <div class="card border-0 shadow-sm rounded-4 mb-4">
+          <div class="card-body">
+            <h4 class="fw-bold mb-3 text-success">
+              <i class="bi bi-tags me-2"></i> Kategori Berita
+            </h4>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 py-2">
+                <a href="#" class="text-decoration-none text-dark">Akademik</a>
+                <span class="badge bg-success rounded-pill">12</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 py-2">
+                <a href="#" class="text-decoration-none text-dark">Keislaman</a>
+                <span class="badge bg-success rounded-pill">8</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 py-2">
+                <a href="#" class="text-decoration-none text-dark">Prestasi</a>
+                <span class="badge bg-success rounded-pill">15</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 py-2">
+                <a href="#" class="text-decoration-none text-dark">Ekstrakurikuler</a>
+                <span class="badge bg-success rounded-pill">6</span>
+              </li>
+              <li class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 py-2">
+                <a href="#" class="text-decoration-none text-dark">Pengumuman</a>
+                <span class="badge bg-success rounded-pill">10</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Newsletter Subscription -->
+        <div class="card border-0 shadow-sm rounded-4">
+          <div class="card-body">
+            <h4 class="fw-bold mb-3 text-success">
+              <i class="bi bi-envelope me-2"></i> Berlangganan Berita
+            </h4>
+            <p class="text-secondary small">Dapatkan update berita terbaru langsung ke email Anda</p>
+            <form>
+              <div class="mb-3">
+                <input type="email" class="form-control bg-white text-dark border-secondary shadow-sm px-4" placeholder="Alamat Email Anda" required>
+              </div>
+              <button type="submit" class="btn btn-success w-100">Berlangganan Sekarang</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
           <section id="fasilitas-sekolah" class="py-5 bg-white">
             <div class="container">
@@ -1028,7 +1267,7 @@
               <div class="row g-4">
                 <div class="col-lg-4 col-md-6 col-sm-12">
                   <div class="card">
-                    <img src="img/school.jpg" class="card-img-top" alt="Masjid Sekolah">
+                    <img src="img/masjid.jpg" class="card-img-top" alt="Masjid Sekolah">
                     <div class="card-body">
                       <h5 class="card-title">Masjid Sekolah</h5>
                       <p class="card-text">Masjid yang luas dan nyaman sebagai pusat kegiatan ibadah dan pembinaan
@@ -1042,7 +1281,7 @@
 
                 <div class="col-lg-4 col-md-6 col-sm-12">
                   <div class="card">
-                    <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Laboratorium Sains">
+                    <img src="img/labsains.jpg" class="card-img-top" alt="Laboratorium Sains">
                     <div class="card-body">
                       <h5 class="card-title">Laboratorium Sains</h5>
                       <p class="card-text">Laboratorium sains modern yang dilengkapi dengan peralatan lengkap untuk
@@ -1056,7 +1295,7 @@
 
                 <div class="col-lg-4 col-md-6 col-sm-12">
                   <div class="card">
-                    <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Laboratorium Komputer">
+                    <img src="img/labkom.jpeg" class="card-img-top" alt="Laboratorium Komputer">
                     <div class="card-body">
                       <h5 class="card-title">Laboratorium Komputer</h5>
                       <p class="card-text">Laboratorium komputer dengan perangkat terbaru dan koneksi internet cepat
@@ -1070,7 +1309,7 @@
 
                 <div class="col-lg-4 col-md-6 col-sm-12">
                   <div class="card">
-                    <img src="https://via.placeholder.com/400x200" class="card-img-top" lanjutkan dengan contoh
+                    <img src="img/perpus.jpg" class="card-img-top" lanjutkan dengan contoh
                       responsif berikut: ```html alt="Perpustakaan">
                     <div class="card-body">
                       <h5 class="card-title">Perpustakaan</h5>
@@ -1085,7 +1324,7 @@
 
                 <div class="col-lg-4 col-md-6 col-sm-12">
                   <div class="card">
-                    <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Fasilitas Olahraga">
+                    <img src="img/olahraga.jpg" class="card-img-top" alt="Fasilitas Olahraga">
                     <div class="card-body">
                       <h5 class="card-title">Fasilitas Olahraga</h5>
                       <p class="card-text">Fasilitas olahraga lengkap termasuk lapangan basket, futsal, dan voli untuk
@@ -1099,7 +1338,7 @@
 
                 <div class="col-lg-4 col-md-6 col-sm-12">
                   <div class="card">
-                    <img src="https://via.placeholder.com/400x200" class="card-img-top" alt="Asrama Siswa">
+                    <img src="img/asrama.jpg" class="card-img-top" alt="Asrama Siswa">
                     <div class="card-body">
                       <h5 class="card-title">Asrama Siswa</h5>
                       <p class="card-text">Asrama yang nyaman dan aman dengan fasilitas lengkap untuk siswa yang
@@ -1166,18 +1405,18 @@
                       <!-- Nama Lengkap -->
                       <div class="mb-3">
                         <label class="form-label">Nama Lengkap</label>
-                        <input type="text" class="form-control bg-dark text-white" placeholder="Masukkan nama lengkap">
+                        <input type="text" class="form-control bg-white border border-secondary text-white" placeholder="Masukkan nama lengkap">
                       </div>
           
                       <!-- Tempat & Tanggal Lahir + Asal Sekolah -->
                       <div class="row">
                         <div class="col-md-6 mb-3">
                           <label class="form-label">Tempat, Tanggal Lahir</label>
-                          <input type="text" class="form-control bg-dark text-white" placeholder="Contoh: Jakarta, 15 Januari 2010">
+                          <input type="text" class="form-control bg-white border border-secondary text-white" placeholder="Contoh: Jakarta, 15 Januari 2010">
                         </div>
                         <div class="col-md-6 mb-3">
                           <label class="form-label">Asal Sekolah</label>
-                          <input type="text" class="form-control bg-dark text-white" placeholder="Masukkan nama SMP/MTs">
+                          <input type="text" class="form-control bg-white border border-secondary text-white" placeholder="Masukkan nama SMP/MTs">
                         </div>
                       </div>
           
@@ -1197,18 +1436,18 @@
                       <!-- Alamat -->
                       <div class="mb-3">
                         <label class="form-label">Alamat Lengkap</label>
-                        <textarea class="form-control bg-dark text-white" rows="2" placeholder="Masukkan alamat lengkap"></textarea>
+                        <textarea class="form-control bg-white border border-secondary text-white" rows="2" placeholder="Masukkan alamat lengkap"></textarea>
                       </div>
           
                       <!-- No Telepon & Email -->
                       <div class="row">
                         <div class="col-md-6 mb-3">
                           <label class="form-label">No. Telepon</label>
-                          <input type="text" class="form-control bg-dark text-white" placeholder="Contoh: 08123456789">
+                          <input type="text" class="form-control bg-white border border-secondary text-white" placeholder="Contoh: 08123456789">
                         </div>
                         <div class="col-md-6 mb-3">
                           <label class="form-label">Email</label>
-                          <input type="email" class="form-control bg-dark text-white" placeholder="Contoh: nama@email.com">
+                          <input type="email" class="form-control bg-white border border-secondary text-white" placeholder="Contoh: nama@email.com">
                         </div>
                       </div>
           
@@ -1216,18 +1455,18 @@
                       <div class="row">
                         <div class="col-md-6 mb-3">
                           <label class="form-label">Nama Orang Tua/Wali</label>
-                          <input type="text" class="form-control bg-dark text-white" placeholder="Masukkan nama orang tua/wali">
+                          <input type="text" class="form-control bg-white border border-secondary text-white" placeholder="Masukkan nama orang tua/wali">
                         </div>
                         <div class="col-md-6 mb-3">
                           <label class="form-label">No. Telepon Orang Tua/Wali</label>
-                          <input type="text" class="form-control bg-dark text-white" placeholder="Contoh: 08123456789">
+                          <input type="text" class="form-control bg-white border border-secondary text-white" placeholder="Contoh: 08123456789">
                         </div>
                       </div>
           
                       <!-- Program -->
                       <div class="mb-3">
                         <label class="form-label">Program yang Diminati</label>
-                        <select class="form-select bg-dark text-white">
+                        <select class="form-select bg-white border border-secondary text-dark">
                           <option selected disabled>Pilih Program</option>
                           <option>Program Reguler</option>
                           <option>Program Tahfidz</option>
@@ -1336,7 +1575,7 @@
                 <div class="col-md-4">
                   <h6 class="fw-bold mb-3">Berlangganan</h6>
                   <form class="d-flex mb-3" role="search">
-                    <input class="form-control me-2 bg-secondary text-white border-0" type="email" placeholder="Alamat Email" aria-label="Email">
+                    <input class="form-control me-2  bg-white text-white border-0" type="email" placeholder="Alamat Email" aria-label="Email">
                     <button class="btn btn-success" type="submit"><i class="bi bi-send-fill"></i></button>
                   </form>
           
@@ -1357,7 +1596,9 @@
                 </div>
               </div>
             </div>
-          </footer>
+          </footer> 
+
+          
           
           
 
@@ -1376,6 +1617,8 @@
               <button onclick="sendMessage()">Kirim</button>
             </div>
           </div>
+
+          
 
           <!-- JavaScript Chat Logic -->
           <script>
@@ -1546,7 +1789,7 @@
           <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
           <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-
+          
 </body>
 
 </html>
