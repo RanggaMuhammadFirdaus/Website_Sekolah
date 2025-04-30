@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SMA Al-Quran</title>
+  <title>Detail Galerry</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css">
-
-  <link rel="stylesheet" href="css/profil.css">
+  <style>
+    .detail-image {
+      max-height: 400px;
+      object-fit: cover;
+      width: 100%;
+      border-radius: 12px;
+    }
+  </style>
 </head>
-
 <body>
 
-  <!-- Navbar -->
+     <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm py-3">
     <div class="container-fluid">
       <a class="navbar-brand fw-bold" href="#"><span style="color: green;">logo</span> SMA Al-Quran</a>
@@ -39,71 +43,11 @@
     </div>
   </nav>
 
-  <section id="profil-sekolah" class="py-5">
-    <div class="container">
-  
-      <div class="section">
-        <h4 class="section-title"><i class="bi bi-info-circle-fill"></i> Profil Sekolah</h4>
-        <h5 class="mb-2">Sejarah Sekolah</h5>
-        <p>Didirikan pada tahun 1998, sekolah ini berawal dari satu gedung kecil dengan 3 kelas. Berkat semangat dan komitmen untuk membangun generasi Islami dan berprestasi, kini sekolah telah berkembang menjadi salah satu lembaga pendidikan terbaik di daerah, dengan fasilitas lengkap serta sistem pembelajaran modern berbasis nilai-nilai keislaman.</p>
-      </div>
-  
-      <div class="section">
-        <h4 class="section-title"><i class="bi bi-lightbulb-fill"></i> Visi, Misi, & Nilai</h4>
-        <h6><strong>Visi:</strong></h6>
-        <p>Menjadi sekolah unggulan yang berbasis keislaman, berwawasan global, dan berkarakter mulia.</p>
-  
-        <h6><strong>Misi:</strong></h6>
-        <ul>
-          <li>Menyelenggarakan pendidikan berkualitas berbasis nilai Islam.</li>
-          <li>Mengembangkan potensi siswa secara akademik dan non-akademik.</li>
-          <li>Mewujudkan lingkungan sekolah yang nyaman, aman, dan inspiratif.</li>
-          <li>Menanamkan nilai integritas, inovasi, dan kepedulian sosial.</li>
-        </ul>
-  
-        <h6><strong>Nilai-nilai Sekolah:</strong></h6>
-        <ul>
-          <li>Religius, membangun karakter berdasarkan nilai-nilai Islam</li>
-          <li>Jujur, menegakkan kejujuran dalam tanggung jawab</li>
-          <li>Inovatif, mendorong kreativitas dalam belajar dan berkarya</li>
-          <li>Berkasih sayang, toleransi tinggi antarwarga sekolah</li>
-        </ul>
-      </div>
-  
-      <div class="section">
-        <h4 class="section-title"><i class="bi bi-diagram-3-fill"></i> Struktur Organisasi</h4>
-        <h6><strong>Pengurus Sekolah:</strong></h6>
-        <ul class="list-unstyled">
-          <li><strong>Drs. H. Ahmad Zakaria</strong> – Kepala Sekolah</li>
-          <li><strong>Siti Nurjanah, M.Pd</strong> – Wakil Kepala Sekolah Kurikulum</li>
-          <li><strong>Budi Santosa, S.Pd</strong> – Wakil Kepala Sekolah Kesiswaan</li>
-        </ul>
-  
-        <h6><strong>Dewan Guru:</strong></h6>
-        <ul class="list-unstyled">
-          <li>Andin Rahmawati, S.Pd</li>
-          <li>Fatimah Zahra, S.Pd.I</li>
-          <li>Fauzan Mufid, M.Pd</li>
-          <li>Sulaiman Hadi, S.Si</li>
-          <li>Dewi May, S.T</li>
-        </ul>
-      </div>
-  
-      <div class="section">
-        <h4 class="section-title"><i class="bi bi-award-fill"></i> Sertifikasi & Pengakuan</h4>
-        <ul>
-          <li><strong>Akreditasi A</strong> (2022) <br />
-            <small>Penetapan oleh Badan Akreditasi Nasional Sekolah/Madrasah</small>
-          </li>
-          <li><strong>Sekolah Adiwiyata Nasional</strong> (2023) <br />
-            <small>Pemberi: Kementerian Lingkungan Hidup & Kehutanan</small>
-          </li>
-        </ul>
-      </div>
-  
-    </div>
-  </section>
-  
+  <div class="container py-5 mt-5">
+    <h2 id="judul" class="fw-bold mb-3"></h2>
+    <img id="gambar" src="" alt="Gambar" class="detail-image mb-4">
+    <p id="deskripsi"></p>
+  </div>
 
   <footer class="bg-dark text-light pt-5 pb-3">
     <div class="container-fluid px-5">
@@ -170,10 +114,52 @@
     </div>
   </footer> 
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-          <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-          <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script> -->
-          
-</body>
+  <script>
+    const data = {
+      pidato: {
+        judul: "Kompetisi Pidato Tingkat Nasional",
+        gambar: "img/pidato.jpg",
+        deskripsi: "Para siswi kami menerima penghargaan dalam kompetisi pidato Bahasa Arab dan Inggris tingkat nasional tahun 2023."
+      },
+      tahfidz: {
+        judul: "Program Tahfidzul Quran",
+        gambar: "img/tahfidz.jpg",
+        deskripsi: "Siswa-siswi sedang mengikuti program intensif hafalan Al-Quran yang merupakan program unggulan sekolah kami."
+      },
+      robotik: {
+        judul: "Praktikum Robotik & Teknologi",
+        gambar: "img/robotik.jpg",
+        deskripsi: "Siswi kami sedang melakukan praktikum robotik sebagai bagian dari kurikulum sains dan teknologi."
+      },
+      dai: {
+        judul: "Program Dai Muda",
+        gambar: "img/dai.jpg",
+        deskripsi: "Pelatihan public speaking dan dakwah untuk mempersiapkan siswa menjadi dai yang kompeten di masyarakat."
+      },
+      sains: {
+        judul: "Kompetisi Sains & Inovasi",
+        gambar: "img/sains.jpeg",
+        deskripsi: "Siswa kami mempresentasikan proyek ilmiah pada kompetisi sains tingkat nasional yang diselenggarakan oleh Kementerian Pendidikan."
+      },
+      kaligrafi: {
+        judul: "Pameran Kaligrafi Islam",
+        gambar: "img/kaligrafi.jpg",
+        deskripsi: "Karya kaligrafi siswa dipamerkan dalam acara seni budaya Islam yang diselenggarakan di sekolah kami."
+      }
+    };
 
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id");
+    const isi = data[id];
+
+    if (isi) {
+      document.getElementById("judul").textContent = isi.judul;
+      document.getElementById("gambar").src = isi.gambar;
+      document.getElementById("deskripsi").textContent = isi.deskripsi;
+    } else {
+      document.getElementById("judul").textContent = "Galeri tidak ditemukan";
+      document.getElementById("deskripsi").textContent = "Silakan kembali dan pilih galeri yang tersedia.";
+    }
+  </script>
+</body>
 </html>
