@@ -49,7 +49,7 @@
             <p>SMA Al-Quran menyediakan pendidikan berkualitas dengan perpaduan kurikulum nasional dan nilai-nilai
               Al-Quran untuk membentuk generasi yang beriman, berilmu, dan berakhlak mulia.</p>
             <a href="pendaftaran.html" class="btn btn-success rounded-pill me-2">Daftar Sekarang</a>
-            <a href="#" class="btn btn-outline-light rounded-pill">Pelajari Program</a>
+            <a href="#unggul" class="btn btn-outline-light rounded-pill">Pelajari Program</a>
           </div>
         </div>
       </div>
@@ -153,6 +153,9 @@
           <img src="img/profile.jpg" alt="Gedung SMA Al-Quran" class="img-fluid rounded-4 shadow-sm"
             style="max-width: 100%;">
         </div>
+      </div>
+      <div>
+        <a href="profil.html" class="btn btn-success">Pelajari lebih lanjut profil sekolah</a>
       </div>
     </div>
   </section>
@@ -1040,8 +1043,15 @@
                 </p>
                 <div class="d-flex justify-content-between align-items-center">
                   <small class="text-muted">25 April 2025</small>
-                  <a href="#" class="btn btn-outline-success btn-sm">Baca Selengkapnya</a>
-                </div>
+                  <a href="#" class="btn btn-outline-success btn-sm"
+                  onclick="redirectToDetailBerita(
+                    'Wisuda Angkatan 2025: 100% Siswa Diterima di Perguruan Tinggi Terkenal',
+                    'SMA Al-Quran kembali menorehkan prestasi gemilang dengan keberhasilan 100% lulusan angkatan 2025 diterima di perguruan tinggi terkenal baik dalam maupun luar negeri, termasuk UI, ITB, UGM, dan beberapa universitas di Timur Tengah.',
+                    'img/wisuda.jpg',
+                    '25 April 2025'
+                  )">Baca Selengkapnya</a>
+
+                </div>                
               </div>
             </div>
           </div>
@@ -1061,8 +1071,13 @@
               <div class="card-footer bg-transparent border-0">
                 <div class="d-flex justify-content-between align-items-center">
                   <small class="text-muted">20 April 2025</small>
-                  <a href="#" class="btn btn-outline-success btn-sm">Baca</a>
-                </div>
+                  <a href="#" class="btn btn-outline-success btn-sm"
+                     onclick="redirectToDetailBerita(
+                       'Siswi SMA Al-Quran Raih Juara 1 MTQ Tingkat Nasional',
+                       'Muhammad Hafiz, siswa kelas 12 berprestasi meraih juara 1 dalam Musabaqah Tilawatil Quran Tingkat Nasional kategori tilawah.',                       
+                       'img/siswi.jpg',
+                       '20 April 2025')">Baca Selengkapnya</a>
+                </div>  
               </div>
             </div>
           </div>
@@ -1079,8 +1094,13 @@
               <div class="card-footer bg-transparent border-0">
                 <div class="d-flex justify-content-between align-items-center">
                   <small class="text-muted">15 April 2025</small>
-                  <a href="#" class="btn btn-outline-success btn-sm">Baca</a>
-                </div>
+                  <a href="#" class="btn btn-outline-success btn-sm"
+                     onclick="redirectToDetailBerita(
+                       'Tim Olimpiade Sains Raih 5 Medali di Kompetisi Internasional',
+                       'Tim Olimpiade Sains SMA Al-Quran berhasil meraih 2 medali emas, 2 medali perak, dan 1 medali perunggu di kompetisi ISPO 2025.',                       
+                       'img/juarasains.jpg',
+                       '15 April 2025')">Baca Selengkapnya</a>
+                </div>  
               </div>
             </div>
           </div>
@@ -1097,8 +1117,13 @@
               <div class="card-footer bg-transparent border-0">
                 <div class="d-flex justify-content-between align-items-center">
                   <small class="text-muted">10 April 2025</small>
-                  <a href="#" class="btn btn-outline-success btn-sm">Baca</a>
-                </div>
+                  <a href="#" class="btn btn-outline-success btn-sm"
+                     onclick="redirectToDetailBerita(
+                       'Tim Robotik SMA Al-Quran Lolos Kejuaraan Dunia',
+                       'Tim Robotik sekolah berhasil lolos ke kompetisi FIRST Global Challenge setelah memenangkan kompetisi regional.',                       
+                       'img/juararobotik.jpeg',
+                       '10 April 2025')">Baca Selengkapnya</a>
+                </div>  
               </div>
             </div>
           </div>
@@ -1115,17 +1140,22 @@
               <div class="card-footer bg-transparent border-0">
                 <div class="d-flex justify-content-between align-items-center">
                   <small class="text-muted">5 April 2025</small>
-                  <a href="#" class="btn btn-outline-success btn-sm">Baca</a>
-                </div>
+                  <a href="#" class="btn btn-outline-success btn-sm"
+                     onclick="redirectToDetailBerita(
+                       'Penerimaan Peserta Didik Baru Tahun Ajaran 2025/2026',
+                       'Pendaftaran PPDB dibuka mulai 1 Mei 2025.Kuota terbatas untuk 120 siswa baru.',                       
+                       'img/ppdb.jpg',
+                       '5 April 2025')">Baca Selengkapnya</a>
+                </div>  
               </div>
             </div>
           </div>
         </div>
 
-        <!-- View All News Button -->
+        <!-- View All News Button
         <div class="text-center mt-4">
           <a href="#" class="btn btn-success px-4">Lihat Semua Berita</a>
-        </div>
+        </div> -->
       </div>
 
       <!-- Right Column: Agenda & Sidebar -->
@@ -1200,7 +1230,7 @@
             </div>
             
             <div class="text-center mt-3">
-              <a href="#" class="btn btn-outline-success btn-sm">Lihat Kalender Lengkap</a>
+              <a href="calendar.html" class="btn btn-outline-success btn-sm">Lihat Kalender Lengkap</a>
             </div>
           </div>
         </div>
@@ -1635,6 +1665,16 @@
                 }
               }
             });
+
+            function redirectToDetailBerita(title, content, image, date) {
+  const params = new URLSearchParams({
+    title: title,
+    content: content,
+    image: image,
+    date: date
+  });
+  window.location.href = 'detailberita.html?' + params.toString();
+}
           </script>
 
           

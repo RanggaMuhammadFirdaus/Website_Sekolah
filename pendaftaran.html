@@ -16,7 +16,31 @@
 </head>
 <body>
 
-<section id="pendaftaran" class="form-section">
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm py-3">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#"><span style="color: green;">logo</span> SMA Al-Quran</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto me-3">
+          <li class="nav-item"><a class="nav-link" href="index.html#beranda">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#profil">Profil</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#unggul">Program Unggulan</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#program-akademik">Akademik</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#fasilitas-sekolah">Fasilitas</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#berita-agenda">Berita</a></li>
+        </ul>
+        <form class="d-flex me-3" role="search">
+          <input class="form-control bg-white text-dark border border-secondary rounded-pill shadow-sm px-4" type="search" placeholder="Cari..." aria-label="Search">
+        </form>        
+        <a href="pendaftaran.html" class="btn btn-success rounded-pill">Daftar Sekarang</a>
+      </div>
+    </div>
+  </nav>
+
+<section id="pendaftaran" class="form-section mt-5">
   <div class="container">
     <div class="text-center mb-5">
       <h3 class="fw-bold">Pendaftaran Siswa Baru</h3>
@@ -140,10 +164,77 @@
           </form>
         </div>
       </div>
-
+      <div class="text-center mt-4">
+        <a href="index.html#beranda" class="btn btn-success">Kembali ke Beranda</a>
+      </div>
     </div>
   </div>
 </section>
+
+<footer class="bg-dark text-light pt-5 pb-3">
+  <div class="container-fluid px-5">
+    <div class="row gy-4">
+
+      <!-- Logo & Deskripsi -->
+      <div class="col-md-3">
+        <h5 class="fw-bold mb-3">logo SMA Al–Quran</h5>
+        <p>Membentuk generasi Qurani yang unggul dalam ilmu pengetahuan dan berakhlak mulia.</p>
+        <div class="d-flex gap-3">
+          <a href="#"><i class="bi bi-facebook text-light"></i></a>
+          <a href="#"><i class="bi bi-instagram text-light"></i></a>
+          <a href="#"><i class="bi bi-youtube text-light"></i></a>
+        </div>
+      </div>
+
+      <!-- Link Cepat -->
+      <div class="col-md-2">
+        <h6 class="fw-bold mb-3">Link Cepat</h6>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-light text-decoration-none">Beranda</a></li>
+          <li><a href="#" class="text-light text-decoration-none">Profil</a></li>
+          <li><a href="#" class="text-light text-decoration-none">Program Unggulan</a></li>
+          <li><a href="#" class="text-light text-decoration-none">Akademik</a></li>
+          <li><a href="#" class="text-light text-decoration-none">Fasilitas</a></li>
+          <li><a href="#" class="text-light text-decoration-none">Berita</a></li>
+          <li><a href="#" class="text-light text-decoration-none">Pendaftaran</a></li>
+        </ul>
+      </div>
+
+      <!-- Kontak Kami -->
+      <div class="col-md-3">
+        <h6 class="fw-bold mb-3">Kontak Kami</h6>
+        <p>Jl. Pendidikan No. 123, Kota Jakarta, Indonesia 12345</p>
+        <p><i class="bi bi-telephone-fill me-2"></i> +62 21 1234 5678</p>
+        <p><i class="bi bi-envelope-fill me-2"></i> info@smaalquran.sch.id</p>
+        <p><i class="bi bi-clock-fill me-2"></i> Senin - Jumat: 07.00 - 16.00 WIB</p>
+      </div>
+
+      <!-- Berlangganan & Lokasi -->
+      <div class="col-md-4">
+        <h6 class="fw-bold mb-3">Berlangganan</h6>
+        <form class="d-flex mb-3" role="search">
+          <input class="form-control me-2  bg-white text-white border-0" type="email" placeholder="Alamat Email" aria-label="Email">
+          <button class="btn btn-success" type="submit"><i class="bi bi-send-fill"></i></button>
+        </form>
+
+        <h6 class="fw-bold mb-2">Lokasi</h6>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18..." width="100%" height="120" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+
+    </div>
+
+    <hr class="border-secondary mt-4">
+
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-center pt-3">
+      <p class="mb-0">© 2025 SMA Al-Quran. Hak Cipta Dilindungi.</p>
+      <div>
+        <a href="#" class="text-light text-decoration-none me-3">Kebijakan Privasi</a>
+        <a href="#" class="text-light text-decoration-none me-3">Syarat & Ketentuan</a>
+        <a href="#" class="text-light text-decoration-none">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer> 
 
 <script>
   // Bootstrap validation

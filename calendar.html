@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>School Activities Calendar</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .calendar-cell {
+      width: 40px;
+      height: 40px;
+      text-align: center;
+      vertical-align: middle;
+      cursor: pointer;
+    }
+
+    .calendar-cell.event-day {
+      background-color: #198754;
+      color: white;
+      border-radius: 50%;
+    }
+
+    .calendar-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .event-card {
+      border-left: 5px solid #198754;
+      padding-left: 15px;
+      margin-bottom: 10px;
+    }
+
+    .event-date-box {
+      width: 60px;
+      text-align: center;
+      border-radius: 10px;
+      background-color: rgba(25,135,84,0.1);
+      color: #198754;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body class="bg-light">
+  <div class="container py-5">
+    <div>
+        <a href="index.html#beranda" class="btn btn-success">Kembali ke Beranda</a>
+      </div>
+    <h3 class="mb-4 fw-bold">School Activities Calendar</h3>
+    <div class="row">
+      
+      <!-- Calendar Column -->
+      <div class="col-lg-6 mb-4">
+        <div class="card shadow-sm rounded-4">
+          <div class="card-body">
+            <div class="calendar-nav mb-3">
+              <button class="btn btn-outline-secondary btn-sm" onclick="changeMonth(-1)">&#8592;</button>
+              <h5 id="month-year" class="mb-0"></h5>
+              <button class="btn btn-outline-secondary btn-sm" onclick="changeMonth(1)">&#8594;</button>
+            </div>
+            <table class="table table-bordered text-center">
+              <thead class="table-light">
+                <tr>
+                  <th>Su</th><th>Mo</th><th>Tu</th><th>We</th><th>Th</th><th>Fr</th><th>Sa</th>
+                </tr>
+              </thead>
+              <tbody id="calendar-body"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Events Column -->
+      <div class="col-lg-6">
+        <div class="card shadow-sm rounded-4">
+          <div class="card-body">
+            <h5 class="fw-bold mb-2" id="events-title"></h5>
+            <p class="text-muted" id="events-count"></p>
+            <div id="event-list" class="mt-3"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    const events = [
+      { date: '2025-04-26', title: 'Ujian Akhir Semester Genap', time: '08.00 - 12.00 WIB' },
+      { date: '2025-04-28', title: 'Seminar Persiapan SBMPTN', time: '09.00 - 15.00 WIB' },
+      { date: '2025-05-01', title: 'Festival Sains & Teknologi', time: '08.00 - 17.00 WIB' },
+      { date: '2025-05-05', title: "Mushabaqah Hafidz Qur'an", time: '08.00 - selesai' },
+      { date: '2025-05-20', title: 'Wisuda Angkatan 2025', time: '08.00 - 12.00 WIB' },
+    ];
+
+    let currentDate = new Date();
+
+    function changeMonth(offset) {
+      currentDate.setMonth(currentDate.getMonth() + offset);
+      renderCalendar();
+      renderEvents();
+    }
+
+    function renderCalendar() {
+      const year = currentDate.getFullYear();
+      const month = currentDate.getMonth();
+      const firstDay = new Date(year, month, 1).getDay();
+      const lastDate = new Date(year, month + 1, 0).getDate();
+
+      document.getElementById("month-year").textContent = currentDate.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+
+      const calendarBody = document.getElementById("calendar-body");
+      calendarBody.innerHTML = '';
+      let date = 1;
+
+      for (let i = 0; i < 6; i++) {
+        const row = document.createElement("tr");
+        for (let j = 0; j < 7; j++) {
+          const cell = document.createElement("td");
+          cell.className = 'calendar-cell';
+
+          if (i === 0 && j < firstDay) {
+            cell.innerHTML = '';
+          } else if (date > lastDate) {
+            break;
+          } else {
+            const thisDate = `${year}-${String(month + 1).padStart(2, '0')}-${String(date).padStart(2, '0')}`;
+            const hasEvent = events.some(e => e.date === thisDate);
+            if (hasEvent) {
+              cell.classList.add('event-day');
+            }
+            cell.textContent = date;
+            date++;
+          }
+
+          row.appendChild(cell);
+        }
+        calendarBody.appendChild(row);
+      }
+    }
+
+    function renderEvents() {
+      const year = currentDate.getFullYear();
+      const month = currentDate.getMonth() + 1;
+      const monthStr = String(month).padStart(2, '0');
+
+      const filteredEvents = events.filter(e => e.date.startsWith(`${year}-${monthStr}`));
+
+      const eventsTitle = document.getElementById("events-title");
+      const eventsCount = document.getElementById("events-count");
+      const eventList = document.getElementById("event-list");
+
+      const monthName = currentDate.toLocaleDateString('en-US', { month: 'long' });
+
+      eventsTitle.textContent = `Events in ${monthName} ${year}`;
+      eventsCount.textContent = `${filteredEvents.length} activities scheduled this month.`;
+
+      eventList.innerHTML = '';
+
+      if (filteredEvents.length === 0) {
+        eventList.innerHTML = `<p class="text-muted text-center">No events scheduled.</p>`;
+      } else {
+        filteredEvents.forEach(e => {
+          const dateObj = new Date(e.date);
+          const day = dateObj.getDate().toString().padStart(2, '0');
+          const monthAbbr = dateObj.toLocaleDateString('en-US', { month: 'short' }).toUpperCase();
+
+          const card = `
+            <div class="d-flex align-items-start mb-3 event-card">
+              <div class="event-date-box me-3 py-2">
+                <div class="fs-5">${day}</div>
+                <div class="small">${monthAbbr}</div>
+              </div>
+              <div>
+                <h6 class="fw-bold mb-1">${e.title}</h6>
+                <small class="text-muted"><i class="bi bi-clock me-1"></i> ${e.time}</small>
+              </div>
+            </div>
+          `;
+          eventList.innerHTML += card;
+        });
+      }
+    }
+
+    // Initial rendering
+    renderCalendar();
+    renderEvents();
+  </script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Detail Berita</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .content-paragraph + .content-paragraph {
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+<section id="detailberita" class="py-5">
+  <div class="container">
+    <div class="card border-0 shadow rounded-4 overflow-hidden">
+      <img id="berita-image" src="" class="card-img-top" alt="Gambar Berita" style="object-fit: cover; height: 300px;">
+      <div class="card-body p-4">
+        <span class="badge bg-success mb-2" id="berita-badge">Berita</span>
+        <h3 class="card-title fw-bold" id="berita-title">Judul Berita</h3>
+        <small class="text-muted d-block mb-3" id="berita-date">Tanggal</small>
+        <p class="text-secondary" id="berita-content">Konten berita akan dimuat di sini...</p>
+
+        <div class="d-flex justify-content-between mt-4">
+          <a href="index.html#berita-agenda" class="btn btn-outline-secondary">← Kembali ke Daftar Berita</a>          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  function getParams() {
+    const params = new URLSearchParams(window.location.search);
+    return {
+      title: params.get("title"),
+      content: params.get("content"),
+      date: params.get("date"),
+      author: params.get("author"),
+      views: params.get("views"),
+      image: params.get("image")
+    };
+  }
+
+  function updatePageContent() {
+    const { title, content, date, author, views, image } = getParams();
+
+    // Set default if missing
+    document.getElementById("berita-title").textContent = title || "Judul tidak tersedia";
+    document.getElementById("berita-date").textContent = date || "Tanggal tidak tersedia";
+    document.getElementById("berita-image").src = image || "img/default.jpg";
+
+    // Convert long content into paragraphs if needed
+    const contentElement = document.getElementById("berita-content");
+    if (content) {
+      const sentences = content.split(/[.?!]\s/);
+      contentElement.innerHTML = sentences.map(s => `<p class="text-secondary content-paragraph">${s.trim()}.</p>`).join('');
+    } else {
+      contentElement.innerHTML = "<p class='text-secondary'>Konten tidak tersedia.</p>";
+    }
+  }
+
+  // Run when page loads
+  window.onload = updatePageContent;
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
