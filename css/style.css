@@ -46,9 +46,13 @@
     background-color: rgba(0, 0, 0, 0.5);
     padding: 1rem 1.5rem;
     border-radius: 1rem;
-    max-width: 90%;
+    max-width: 80%;
 }
 
+#beranda {
+  height: 100vh;
+  overflow: hidden;
+}
   
 
   /* Stats Cards */
