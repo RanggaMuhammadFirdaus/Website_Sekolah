@@ -35,6 +35,20 @@
     margin-right: 10px;
   }
 
+  .carousel-item img {
+    object-fit: cover;
+    height: 100vh;
+    width: 100%;
+}
+
+.carousel-caption {
+    bottom: 20%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1rem 1.5rem;
+    border-radius: 1rem;
+    max-width: 90%;
+}
+
   
 
   /* Stats Cards */
@@ -703,5 +717,20 @@ footer iframe {
   border-radius: 8px;
   /* overflow: hidden; */
   margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .carousel-caption h1 {
+      font-size: 1.5rem;
+  }
+
+  .carousel-caption p {
+      font-size: 0.9rem;
+  }
+
+  .carousel-caption {
+      bottom: 10%;
+      padding: 1rem;
+  }
 }
 
